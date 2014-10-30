@@ -1,0 +1,7 @@
+id,code,name,OpenERP Account Type,user_type/id,parent_id/id,type
+account_account_v2_6,63800,ค่าธรรมเนียมเครดิตการ์ดลูกค้า,expense,account.data_account_type_expense,__export__.account_account_234,Regular
+account_account_v2_5,63700,ค่าใช้จ่าย Modernt Trade,expense,account.data_account_type_expense,__export__.account_account_234,Regular
+account_account_v2_4,63600,ค่าของ Premium,expense,account.data_account_type_expense,__export__.account_account_234,Regular
+account_account_v2_3,62500,ค่าซ่อมบำรุงยานพาหนะในการขนส่ง,expense,account.data_account_type_expense,__export__.account_account_231,Regular
+account_account_v2_2,62400,ค่าใช้จ่ายในการขนส่ง,expense,account.data_account_type_expense,__export__.account_account_231,Regular
+account_account_v2_1,62300,ค่าน้ำมันรถในการขนส่ง (Fleet),expense,account.data_account_type_expense,__export__.account_account_231,Regular

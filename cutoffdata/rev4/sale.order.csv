@@ -1,0 +1,699 @@
+id,partner_id,partner_invoice_id,partner_shipping_id,name,date_order,pricelist_id/id,order_line/sequence,order_line/type,order_line/name,order_line/product_id,order_line/product_uom_qty,order_line/salesman_id/id,order_line/price_unit,order_line/product_uom
+sale_order_1005446,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,1003141,2012-11-02,product.list0,60,from stock,** ส่งต้นเดือน ธ.ค. 55 ** nobox ไม่เอาฟรีไต้หวัน,WAN12SB,10,base.user_root,837,คัน
+sale_order_1005446,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,1003141,2012-11-02,product.list0,50,from stock,** ส่งต้นเดือน ธ.ค. 55 ** nobox ไม่เอาฟรีไต้หวัน,WAN12P,10,base.user_root,837,คัน
+sale_order_1005446,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,1003141,2012-11-02,product.list0,80,from stock,** ส่งต้นเดือน ธ.ค. 55 ** nobox ไม่เอาฟรีไต้หวัน,WAN12R,10,base.user_root,856,คัน
+sale_order_1005446,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,อ.เฟอร์นิเจอร์,1003141,2012-11-02,product.list0,70,from stock,** ส่งต้นเดือน ธ.ค. 55 ** nobox ไม่เอาฟรีไต้หวัน,WAN12R,4,base.user_root,856,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,130,from stock,N/A,WAN12SB,6,base.user_root,840,คัน
+sale_order_1006182,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003877,2013-01-04,product.list0,10,from stock,** ราคาเนต ** nobox **,WAN12P,40,base.user_root,795,คัน
+sale_order_1006182,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003877,2013-01-04,product.list0,20,from stock,** ราคาเนต ** nobox **,WAN12P,40,base.user_root,795,คัน
+sale_order_1006182,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003877,2013-01-04,product.list0,30,from stock,** ราคาเนต ** nobox **,WAN12R,60,base.user_root,795,คัน
+sale_order_1006151,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003846,2012-12-28,product.list0,10,from stock,N/A,WAN12P,4,base.user_root,840,คัน
+sale_order_1006151,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003846,2012-12-28,product.list0,20,from stock,N/A,WAN12SB,4,base.user_root,840,คัน
+sale_order_1005742,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003437,2012-11-27,product.list0,30,from stock,* ราคาเนต * nobox **,WAN12R,30,base.user_root,812,คัน
+sale_order_1005742,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003437,2012-11-27,product.list0,20,from stock,* ราคาเนต * nobox **,WAN12P,10,base.user_root,812,คัน
+sale_order_1005742,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003437,2012-11-27,product.list0,10,from stock,* ราคาเนต * nobox **,WAN12R,10,base.user_root,812,คัน
+sale_order_1005780,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003475,2012-12-01,product.list0,10,from stock,* ราคาเนต *,WAN12P,16,base.user_root,812,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,40,from stock,N/A,WAN12SB,4,base.user_root,865,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,50,from stock,N/A,WAN12P,4,base.user_root,865,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,60,from stock,N/A,WAN12SB,4,base.user_root,865,คัน
+sale_order_1006037,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003732,2012-12-19,product.list0,10,from stock,* ยางไทย * ราคาเนต,WAN12R,20,base.user_root,885,คัน
+sale_order_1006037,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003732,2012-12-19,product.list0,20,from stock,* ยางไทย * ราคาเนต,WAN12P,20,base.user_root,885,คัน
+sale_order_1006037,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003732,2012-12-19,product.list0,30,from stock,* ยางไทย * ราคาเนต,WAN12SB,20,base.user_root,885,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,80,from stock,N/A,WAN12R,30,base.user_root,837,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,70,from stock,N/A,WAN12P,10,base.user_root,837,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,60,from stock,N/A,WAN14SB,10,base.user_root,837,คัน
+sale_order_1005992,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003687,2012-12-17,product.list0,10,from stock,N/A,WAN14P,10,base.user_root,865,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,50,from stock,** nobox ** ไม่เอายางนอกของ TR.,WAN14R,20,base.user_root,835,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,60,from stock,** nobox ** ไม่เอายางนอกของ TR.,WAN14SB,20,base.user_root,835,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,70,from stock,** nobox ** ไม่เอายางนอกของ TR.,WAN14P,40,base.user_root,835,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,70,from stock,N/A,WAN14SB,2,base.user_root,884,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,80,from stock,N/A,WAN14P,2,base.user_root,884,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,100,from stock,N/A,WAN14R,6,base.user_root,856,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,110,from stock,N/A,WAN14SB,6,base.user_root,856,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,120,from stock,N/A,WAN14P,8,base.user_root,856,คัน
+sale_order_1005841,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003536,2012-12-06,product.list0,30,from stock,N/A,WAN14SB,14,base.user_root,856,คัน
+sale_order_1005841,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003536,2012-12-06,product.list0,20,from stock,N/A,WAN14R,16,base.user_root,856,คัน
+sale_order_1005841,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003536,2012-12-06,product.list0,10,from stock,N/A,WAN14P,20,base.user_root,856,คัน
+sale_order_1005961,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003656,2012-12-14,product.list0,30,from stock,N/A,XBF14P,6,base.user_root,750,คัน
+sale_order_1006262,ไทยเจริญจักรยาน 2 (บน),ไทยเจริญจักรยาน 2 (บน),ไทยเจริญจักรยาน 2 (บน),1003957,2013-01-08,product.list0,10,from stock,N/A,WAN16R,2,base.user_root,930,คัน
+sale_order_1006262,ไทยเจริญจักรยาน 2 (บน),ไทยเจริญจักรยาน 2 (บน),ไทยเจริญจักรยาน 2 (บน),1003957,2013-01-08,product.list0,20,from stock,N/A,WAN16SB,4,base.user_root,930,คัน
+sale_order_1006262,ไทยเจริญจักรยาน 2 (บน),ไทยเจริญจักรยาน 2 (บน),ไทยเจริญจักรยาน 2 (บน),1003957,2013-01-08,product.list0,30,from stock,N/A,WAN16P,6,base.user_root,930,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,50,from stock,** ยางไทย ** ส่งเดือน มี.ค. 56 **,WAN16R,20,base.user_root,1005,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,60,from stock,** ยางไทย ** ส่งเดือน มี.ค. 56 **,WAN16P,40,base.user_root,1005,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,70,from stock,** ยางไทย ** ส่งเดือน มี.ค. 56,WAN16SB,20,base.user_root,1005,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,10,from stock,** ยางไทย **,WAN16P,30,base.user_root,1005,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,20,from stock,** ยางไทย **,WAN16R,20,base.user_root,1005,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,80,from stock,** nobox ** ไม่เอายางนอกของ TR.,WAN16R,30,base.user_root,912,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,90,from stock,** nobox ** ไม่เอายางนอกของ TR.,WAN16SB,20,base.user_root,912,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,100,from stock,** nobox ** ไม่เอายางนอกของ TR.,WAN16P,50,base.user_root,912,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,50,from stock,N/A,WAN16P,2,base.user_root,960,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,60,from stock,N/A,WAN16SB,2,base.user_root,960,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,120,from stock,N/A,WAN16P,10,base.user_root,900,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,130,from stock,N/A,WAN16SB,6,base.user_root,900,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,140,from stock,N/A,WAN16R,2,base.user_root,900,คัน
+sale_order_1005894,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003589,2012-12-10,product.list0,20,from stock,** ยางนอก-ใน ไทย ** ด่วน!,WAN16P,10,base.user_root,1000,คัน
+sale_order_1005894,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003589,2012-12-10,product.list0,10,from stock,** ยางนอก-ใน ไทย ** ด่วน!_x000D_,WAN16SB,20,base.user_root,1000,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,30,from stock,N/A,WAN16P,30,base.user_root,929,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,20,from stock,N/A,WAN16SB,10,base.user_root,929,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,10,from stock,N/A,WAN16R,10,base.user_root,929,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,30,from stock,** ยางไทย **,WAN16P,4,base.user_root,980,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,10,from stock,** ยางไทย **,WAN16R,4,base.user_root,980,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,20,from stock,** ยางไทย **,WAN16SB,2,base.user_root,980,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,40,from stock,** ราคาเนต **,MBB16SR,2,base.user_root,1178,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,50,from stock,** ราคาเนต **,MBB16YK,2,base.user_root,1178,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,60,from stock,** ราคาเนต **,MBB16RB,2,base.user_root,1178,คัน
+sale_order_1005802,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003497,2012-12-03,product.list0,20,from stock,* ราคาเนต *,XBF12SB,4,base.user_root,740,คัน
+sale_order_1005802,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003497,2012-12-03,product.list0,10,from stock,* ราคาเนต *,XBF12P,4,base.user_root,740,คัน
+sale_order_1005961,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003656,2012-12-14,product.list0,20,from stock,N/A,XBF14SB,6,base.user_root,750,คัน
+sale_order_1005496,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003191,2012-11-05,product.list0,20,from stock,** ราคาเนต **,XBF16SB,2,base.user_root,820,คัน
+sale_order_1005961,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003656,2012-12-14,product.list0,10,from stock,N/A,XBF16P,10,base.user_root,800,คัน
+sale_order_1006211,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003906,2013-01-05,product.list0,10,from stock,N/A,MCL24P,10,base.user_root,1800,คัน
+sale_order_1006190,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003885,2013-01-04,product.list0,10,from stock,N/A,MCL24R,2,base.user_root,1800,คัน
+sale_order_1006190,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003885,2013-01-04,product.list0,20,from stock,N/A,MCL24B,3,base.user_root,1800,คัน
+sale_order_1006190,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003885,2013-01-04,product.list0,30,from stock,N/A,MCL24P,3,base.user_root,1800,คัน
+sale_order_1006190,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003885,2013-01-04,product.list0,40,from stock,N/A,MCL24K,2,base.user_root,1800,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,40,from stock,N/A,MCL24K,4,base.user_root,1800,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,50,from stock,N/A,MCL24R,3,base.user_root,1800,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,60,from stock,N/A,MCL24B,4,base.user_root,1800,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,70,from stock,N/A,MCL24P,2,base.user_root,1800,คัน
+sale_order_1006140,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003835,2012-12-26,product.list0,10,from stock,N/A,MCL24R,4,base.user_root,1800,คัน
+sale_order_1006140,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003835,2012-12-26,product.list0,20,from stock,N/A,MCL24B,3,base.user_root,1800,คัน
+sale_order_1006140,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003835,2012-12-26,product.list0,30,from stock,N/A,MCL24P,3,base.user_root,1800,คัน
+sale_order_1006140,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003835,2012-12-26,product.list0,40,from stock,N/A,MCL24K,3,base.user_root,1800,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,30,from stock,N/A,MCL24R,3,base.user_root,1800,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,40,from stock,N/A,MCL24B,3,base.user_root,1800,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,50,from stock,N/A,MCL24P,4,base.user_root,1800,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,60,from stock,N/A,MCL24K,2,base.user_root,1800,คัน
+sale_order_1006062,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003757,2012-12-21,product.list0,40,from stock,** ราคาเนต **,MCL24R,10,base.user_root,1740,คัน
+sale_order_1006062,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003757,2012-12-21,product.list0,50,from stock,** ราคาเนต **,MCL24B,10,base.user_root,1740,คัน
+sale_order_1006062,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003757,2012-12-21,product.list0,60,from stock,** ราคาเนต **,MCL24K,10,base.user_root,1740,คัน
+sale_order_1005984,น่าฮวดเฮง,น่าฮวดเฮง,น่าฮวดเฮง,1003679,2012-12-17,product.list0,60,from stock,N/A,MCL24B,4,base.user_root,1800,คัน
+sale_order_1005984,น่าฮวดเฮง,น่าฮวดเฮง,น่าฮวดเฮง,1003679,2012-12-17,product.list0,70,from stock,N/A,MCL24K,2,base.user_root,1800,คัน
+sale_order_1006261,Rayong city bike,Rayong city bike,Rayong city bike,1003956,2013-01-08,product.list0,10,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006261,Rayong city bike,Rayong city bike,Rayong city bike,1003956,2013-01-08,product.list0,20,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006264,"พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด",1003959,2013-01-08,product.list0,20,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006264,"พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด",1003959,2013-01-08,product.list0,30,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006264,"พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด",1003959,2013-01-08,product.list0,40,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006264,"พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด",1003959,2013-01-08,product.list0,50,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,50,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,60,from stock,N/A,MC320R,2,base.user_root,4485,คัน
+sale_order_1005585,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003280,2012-11-12,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1005585,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003280,2012-11-12,product.list0,10,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,30,from stock,** ราคาเนต **,MC320P,1,base.user_root,4350,คัน
+sale_order_1006202,"พิกุล 1 , ร้าน","พิกุล 1 , ร้าน","พิกุล 1 , ร้าน",1003897,2013-01-05,product.list0,10,from stock,N/A,MC320K,2,base.user_root,4485,คัน
+sale_order_1006202,"พิกุล 1 , ร้าน","พิกุล 1 , ร้าน","พิกุล 1 , ร้าน",1003897,2013-01-05,product.list0,20,from stock,N/A,MC320SB,2,base.user_root,4485,คัน
+sale_order_1006202,"พิกุล 1 , ร้าน","พิกุล 1 , ร้าน","พิกุล 1 , ร้าน",1003897,2013-01-05,product.list0,30,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,20,from stock,** ราคาเนต **,MC320R,1,base.user_root,4350,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,10,from stock,** ราคาเนต **,MC320SB,1,base.user_root,4350,คัน
+sale_order_1006212,พูนสินจักรยาน,พูนสินจักรยาน,พูนสินจักรยาน,1003907,2013-01-05,product.list0,50,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006212,พูนสินจักรยาน,พูนสินจักรยาน,พูนสินจักรยาน,1003907,2013-01-05,product.list0,60,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006212,พูนสินจักรยาน,พูนสินจักรยาน,พูนสินจักรยาน,1003907,2013-01-05,product.list0,70,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006216,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003911,2013-01-05,product.list0,10,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006216,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003911,2013-01-05,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,30,from stock,N/A,MC320R,3,base.user_root,4485,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,40,from stock,N/A,MC320SB,3,base.user_root,4485,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,50,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,60,from stock,N/A,MC320S,3,base.user_root,4485,คัน
+sale_order_1006223,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003918,2013-01-05,product.list0,10,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006223,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003918,2013-01-05,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006230,Rayong city bike,Rayong city bike,Rayong city bike,1003925,2013-01-05,product.list0,10,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006230,Rayong city bike,Rayong city bike,Rayong city bike,1003925,2013-01-05,product.list0,20,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006231,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003926,2013-01-05,product.list0,30,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006231,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003926,2013-01-05,product.list0,40,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006231,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003926,2013-01-05,product.list0,50,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006179,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003874,2013-01-04,product.list0,10,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006179,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003874,2013-01-04,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006179,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003874,2013-01-04,product.list0,30,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006164,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003859,2013-01-03,product.list0,20,from stock,N/A,MC320SB,2,base.user_root,4485,คัน
+sale_order_1006164,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003859,2013-01-03,product.list0,30,from stock,N/A,MC320R,2,base.user_root,4485,คัน
+sale_order_1006164,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003859,2013-01-03,product.list0,40,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006171,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003866,2013-01-03,product.list0,10,from stock,N/A,MC320SB,3,base.user_root,4485,คัน
+sale_order_1006171,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003866,2013-01-03,product.list0,20,from stock,N/A,MC320S,2,base.user_root,4485,คัน
+sale_order_1006172,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003867,2013-01-03,product.list0,10,from stock,N/A,MC320SB,2,base.user_root,4485,คัน
+sale_order_1006178,นายจันทร์,นายจันทร์,นายจันทร์,1003873,2013-01-03,product.list0,10,from stock,N/A,MC320R,3,base.user_root,4485,คัน
+sale_order_1006178,นายจันทร์,นายจันทร์,นายจันทร์,1003873,2013-01-03,product.list0,20,from stock,N/A,MC320SB,3,base.user_root,4485,คัน
+sale_order_1006178,นายจันทร์,นายจันทร์,นายจันทร์,1003873,2013-01-03,product.list0,30,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006178,นายจันทร์,นายจันทร์,นายจันทร์,1003873,2013-01-03,product.list0,40,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006178,นายจันทร์,นายจันทร์,นายจันทร์,1003873,2013-01-03,product.list0,50,from stock,N/A,MC320S,2,base.user_root,4485,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,40,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,50,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,60,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,70,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006127,เอี่ยมเจริญ,เอี่ยมเจริญ,เอี่ยมเจริญ,1003822,2012-12-26,product.list0,10,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,10,from stock,N/A,MC320R,5,base.user_root,4485,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,20,from stock,N/A,MC320SB,5,base.user_root,4485,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,30,from stock,N/A,MC320K,5,base.user_root,4485,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,40,from stock,N/A,MC320S,5,base.user_root,4485,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,50,from stock,N/A,MC320SB,2,base.user_root,4485,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,60,from stock,N/A,MC320K,2,base.user_root,4485,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,70,from stock,N/A,MC320S,2,base.user_root,4485,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,80,from stock,N/A,MC320R,2,base.user_root,4485,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,90,from stock,N/A,MC320P,2,base.user_root,4485,คัน
+sale_order_1006112,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003807,2012-12-25,product.list0,10,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006112,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003807,2012-12-25,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006112,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003807,2012-12-25,product.list0,30,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006112,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003807,2012-12-25,product.list0,40,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006118,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003813,2012-12-25,product.list0,30,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006100,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,1003795,2012-12-24,product.list0,10,from stock,** ราคาเนต **,MC320R,2,base.user_root,4350,คัน
+sale_order_1006100,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,1003795,2012-12-24,product.list0,20,from stock,** ราคาเนต **,MC320SB,2,base.user_root,4350,คัน
+sale_order_1006100,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,1003795,2012-12-24,product.list0,30,from stock,** ราคาเนต **,MC320K,2,base.user_root,4350,คัน
+sale_order_1006100,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,หงษ์ฟ้าเกียรติศักดิ์,1003795,2012-12-24,product.list0,40,from stock,** ราคาเนต **,MC320S,1,base.user_root,4350,คัน
+sale_order_1006108,คูย่งล้ง,คูย่งล้ง,คูย่งล้ง,1003803,2012-12-24,product.list0,10,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006108,คูย่งล้ง,คูย่งล้ง,คูย่งล้ง,1003803,2012-12-24,product.list0,30,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006108,คูย่งล้ง,คูย่งล้ง,คูย่งล้ง,1003803,2012-12-24,product.list0,40,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006108,คูย่งล้ง,คูย่งล้ง,คูย่งล้ง,1003803,2012-12-24,product.list0,50,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006031,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003726,2012-12-19,product.list0,40,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006031,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003726,2012-12-19,product.list0,50,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006031,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003726,2012-12-19,product.list0,60,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006031,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003726,2012-12-19,product.list0,70,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006031,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003726,2012-12-19,product.list0,80,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006040,Rayong city bike,Rayong city bike,Rayong city bike,1003735,2012-12-19,product.list0,10,from stock,N/A,MC320K,2,base.user_root,4485,คัน
+sale_order_1006040,Rayong city bike,Rayong city bike,Rayong city bike,1003735,2012-12-19,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006040,Rayong city bike,Rayong city bike,Rayong city bike,1003735,2012-12-19,product.list0,30,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006041,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003736,2012-12-19,product.list0,10,from stock,N/A,MC320SB,2,base.user_root,4485,คัน
+sale_order_1006041,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003736,2012-12-19,product.list0,20,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1006041,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003736,2012-12-19,product.list0,30,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1006041,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003736,2012-12-19,product.list0,40,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1005896,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003591,2012-12-10,product.list0,20,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1005893,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003588,2012-12-10,product.list0,10,from stock,N/A,MC320S,2,base.user_root,4485,คัน
+sale_order_1006046,หาญพาณิช,หาญพาณิช,หาญพาณิช,1003741,2012-12-19,product.list0,10,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1006046,หาญพาณิช,หาญพาณิช,หาญพาณิช,1003741,2012-12-19,product.list0,20,from stock,N/A,MC320K,1,base.user_root,4485,คัน
+sale_order_1006046,หาญพาณิช,หาญพาณิช,หาญพาณิช,1003741,2012-12-19,product.list0,30,from stock,N/A,MC320S,1,base.user_root,4485,คัน
+sale_order_1005924,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003619,2012-12-12,product.list0,10,from stock,N/A,MC320R,5,base.user_root,4485,คัน
+sale_order_1005989,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,1003684,2012-12-17,product.list0,10,from stock,N/A,MC320R,1,base.user_root,4485,คัน
+sale_order_1005989,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,1003684,2012-12-17,product.list0,20,from stock,N/A,MC320SB,1,base.user_root,4485,คัน
+sale_order_1005942,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003637,2012-12-13,product.list0,30,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1005519,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003214,2012-11-06,product.list0,10,from stock,N/A,MCV24Y,20,base.user_root,1790,คัน
+sale_order_1005566,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,1003261,2012-11-12,product.list0,30,from stock,N/A,MCV24B,1,base.user_root,1790,คัน
+sale_order_1005566,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,1003261,2012-11-12,product.list0,20,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1005566,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,1003261,2012-11-12,product.list0,10,from stock,N/A,MCV24Y,1,base.user_root,1790,คัน
+sale_order_1005600,วิบูลย์ภัณฑ์ (สายฟ้า),วิบูลย์ภัณฑ์ (สายฟ้า),วิบูลย์ภัณฑ์ (สายฟ้า),1003295,2012-11-14,product.list0,30,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,60,from stock,N/A,MCV24Y,2,base.user_root,1790,คัน
+sale_order_1005658,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003353,2012-11-20,product.list0,30,from stock,N/A,MCV24P,2,base.user_root,1790,คัน
+sale_order_1005658,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003353,2012-11-20,product.list0,20,from stock,N/A,MCV24B,3,base.user_root,1790,คัน
+sale_order_1005658,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003353,2012-11-20,product.list0,10,from stock,N/A,MCV24Y,5,base.user_root,1790,คัน
+sale_order_1005644,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003339,2012-11-20,product.list0,10,from stock,N/A,MCV24B,1,base.user_root,1790,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,80,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,70,from stock,N/A,MCV24B,1,base.user_root,1790,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,60,from stock,N/A,MCV24Y,1,base.user_root,1790,คัน
+sale_order_1006194,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003889,2013-01-04,product.list0,10,from stock,N/A,MCV24Y,2,base.user_root,1790,คัน
+sale_order_1006194,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003889,2013-01-04,product.list0,20,from stock,N/A,MCV24P,2,base.user_root,1790,คัน
+sale_order_1006194,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003889,2013-01-04,product.list0,30,from stock,N/A,MCV24B,2,base.user_root,1790,คัน
+sale_order_1005710,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003405,2012-11-26,product.list0,60,from stock,N/A,MCV24B,2,base.user_root,1790,คัน
+sale_order_1005710,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003405,2012-11-26,product.list0,50,from stock,N/A,MCV24Y,2,base.user_root,1790,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,50,from stock,N/A,MCV24Y,1,base.user_root,1790,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,60,from stock,N/A,MCV24B,1,base.user_root,1790,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,70,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,80,from stock,N/A,MCV24Y,1,base.user_root,1790,คัน
+sale_order_1005846,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003541,2012-12-06,product.list0,60,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1005846,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003541,2012-12-06,product.list0,50,from stock,N/A,MCV24B,2,base.user_root,1790,คัน
+sale_order_1005846,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003541,2012-12-06,product.list0,40,from stock,N/A,MCV24Y,2,base.user_root,1790,คัน
+sale_order_1005987,ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),1003682,2012-12-17,product.list0,10,from stock,N/A,MCV24Y,1,base.user_root,1790,คัน
+sale_order_1005987,ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),1003682,2012-12-17,product.list0,20,from stock,N/A,MCV24B,1,base.user_root,1790,คัน
+sale_order_1005987,ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),1003682,2012-12-17,product.list0,30,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1005944,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003639,2012-12-13,product.list0,20,from stock,N/A,MCV24B,1,base.user_root,1790,คัน
+sale_order_1005944,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003639,2012-12-13,product.list0,10,from stock,N/A,MCV24P,1,base.user_root,1790,คัน
+sale_order_1005975,ง้วนฮวด,ง้วนฮวด,ง้วนฮวด,1003670,2012-12-15,product.list0,10,from stock,N/A,MCV24B,3,base.user_root,1790,คัน
+sale_order_1005975,ง้วนฮวด,ง้วนฮวด,ง้วนฮวด,1003670,2012-12-15,product.list0,20,from stock,N/A,MCV24P,2,base.user_root,1790,คัน
+sale_order_1005975,ง้วนฮวด,ง้วนฮวด,ง้วนฮวด,1003670,2012-12-15,product.list0,30,from stock,N/A,MCV24Y,1,base.user_root,1790,คัน
+sale_order_1005960,เจริญเมือง,เจริญเมือง,เจริญเมือง,1003655,2012-12-14,product.list0,10,from stock,N/A,MCV24Y,2,base.user_root,1790,คัน
+sale_order_1005579,ดีชัย,ดีชัย,ดีชัย,1003274,2012-11-12,product.list0,30,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005579,ดีชัย,ดีชัย,ดีชัย,1003274,2012-11-12,product.list0,20,from stock,N/A,MCV26P,2,base.user_root,1890,คัน
+sale_order_1005579,ดีชัย,ดีชัย,ดีชัย,1003274,2012-11-12,product.list0,10,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005576,ศรีรุ่งเรือง,ศรีรุ่งเรือง,ศรีรุ่งเรือง,1003271,2012-11-12,product.list0,30,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005576,ศรีรุ่งเรือง,ศรีรุ่งเรือง,ศรีรุ่งเรือง,1003271,2012-11-12,product.list0,20,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005576,ศรีรุ่งเรือง,ศรีรุ่งเรือง,ศรีรุ่งเรือง,1003271,2012-11-12,product.list0,10,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1005566,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,1003261,2012-11-12,product.list0,60,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005566,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,1003261,2012-11-12,product.list0,50,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005566,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,ฟิล์ม & แฟร์,1003261,2012-11-12,product.list0,40,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005600,วิบูลย์ภัณฑ์ (สายฟ้า),วิบูลย์ภัณฑ์ (สายฟ้า),วิบูลย์ภัณฑ์ (สายฟ้า),1003295,2012-11-14,product.list0,20,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005600,วิบูลย์ภัณฑ์ (สายฟ้า),วิบูลย์ภัณฑ์ (สายฟ้า),วิบูลย์ภัณฑ์ (สายฟ้า),1003295,2012-11-14,product.list0,10,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,70,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1006199,รามาทีวี,รามาทีวี,รามาทีวี,1003894,2013-01-05,product.list0,10,from stock,N/A,MCV26P,2,base.user_root,1890,คัน
+sale_order_1006199,รามาทีวี,รามาทีวี,รามาทีวี,1003894,2013-01-05,product.list0,20,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1006199,รามาทีวี,รามาทีวี,รามาทีวี,1003894,2013-01-05,product.list0,30,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1006206,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003901,2013-01-05,product.list0,10,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1006206,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003901,2013-01-05,product.list0,20,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1006206,"เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)","เจริญกิจจักรยาน, ร้าน (ชัยนาท)",1003901,2013-01-05,product.list0,30,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005656,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003351,2012-11-20,product.list0,10,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1005654,กวงหลีล้ง,กวงหลีล้ง,กวงหลีล้ง,1003349,2012-11-20,product.list0,60,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005654,กวงหลีล้ง,กวงหลีล้ง,กวงหลีล้ง,1003349,2012-11-20,product.list0,50,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005654,กวงหลีล้ง,กวงหลีล้ง,กวงหลีล้ง,1003349,2012-11-20,product.list0,40,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005644,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003339,2012-11-20,product.list0,40,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005644,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003339,2012-11-20,product.list0,30,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005644,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003339,2012-11-20,product.list0,20,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005641,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003336,2012-11-20,product.list0,30,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005641,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003336,2012-11-20,product.list0,20,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005641,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003336,2012-11-20,product.list0,10,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005686,ไล่ฮะจักรยาน,ไล่ฮะจักรยาน,ไล่ฮะจักรยาน,1003381,2012-11-23,product.list0,30,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,50,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,40,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,30,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1006196,เอกเสรีแม่สอด,เอกเสรีแม่สอด,เอกเสรีแม่สอด,1003891,2013-01-04,product.list0,10,from stock,N/A,MCV26P,2,base.user_root,1890,คัน
+sale_order_1006196,เอกเสรีแม่สอด,เอกเสรีแม่สอด,เอกเสรีแม่สอด,1003891,2013-01-04,product.list0,20,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005722,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003417,2012-11-26,product.list0,10,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1005720,ซ.สหยนต์,ซ.สหยนต์,ซ.สหยนต์,1003415,2012-11-26,product.list0,20,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1005720,ซ.สหยนต์,ซ.สหยนต์,ซ.สหยนต์,1003415,2012-11-26,product.list0,10,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005713,"เลิศพลัง 007, บจก.","เลิศพลัง 007, บจก.","เลิศพลัง 007, บจก.",1003408,2012-11-26,product.list0,30,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005713,"เลิศพลัง 007, บจก.","เลิศพลัง 007, บจก.","เลิศพลัง 007, บจก.",1003408,2012-11-26,product.list0,20,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005713,"เลิศพลัง 007, บจก.","เลิศพลัง 007, บจก.","เลิศพลัง 007, บจก.",1003408,2012-11-26,product.list0,10,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005710,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003405,2012-11-26,product.list0,40,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005710,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003405,2012-11-26,product.list0,30,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,80,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,90,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,100,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005733,ไก่นาฬิกา,ไก่นาฬิกา,ไก่นาฬิกา,1003428,2012-11-27,product.list0,20,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005733,ไก่นาฬิกา,ไก่นาฬิกา,ไก่นาฬิกา,1003428,2012-11-27,product.list0,10,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,10,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,20,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1006124,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003819,2012-12-26,product.list0,30,from stock,N/A,MCV26P,2,base.user_root,1890,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,70,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005779,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003474,2012-12-01,product.list0,30,from stock,N/A,MCV26P,3,base.user_root,1890,คัน
+sale_order_1005779,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003474,2012-12-01,product.list0,20,from stock,N/A,MCV26B,3,base.user_root,1890,คัน
+sale_order_1005779,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003474,2012-12-01,product.list0,10,from stock,N/A,MCV26Y,4,base.user_root,1890,คัน
+sale_order_1005807,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003502,2012-12-03,product.list0,20,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005807,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003502,2012-12-03,product.list0,10,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1005802,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003497,2012-12-03,product.list0,50,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005802,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003497,2012-12-03,product.list0,40,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005802,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003497,2012-12-03,product.list0,30,from stock,N/A,MCV26Y,4,base.user_root,1890,คัน
+sale_order_1005846,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003541,2012-12-06,product.list0,90,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005846,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003541,2012-12-06,product.list0,80,from stock,N/A,MCV26B,2,base.user_root,1890,คัน
+sale_order_1005846,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003541,2012-12-06,product.list0,70,from stock,N/A,MCV26Y,2,base.user_root,1890,คัน
+sale_order_1005982,ดีชัย,ดีชัย,ดีชัย,1003677,2012-12-17,product.list0,20,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005982,ดีชัย,ดีชัย,ดีชัย,1003677,2012-12-17,product.list0,30,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005982,ดีชัย,ดีชัย,ดีชัย,1003677,2012-12-17,product.list0,40,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005984,น่าฮวดเฮง,น่าฮวดเฮง,น่าฮวดเฮง,1003679,2012-12-17,product.list0,10,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005984,น่าฮวดเฮง,น่าฮวดเฮง,น่าฮวดเฮง,1003679,2012-12-17,product.list0,20,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005984,น่าฮวดเฮง,น่าฮวดเฮง,น่าฮวดเฮง,1003679,2012-12-17,product.list0,30,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005987,ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),1003682,2012-12-17,product.list0,40,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1005987,ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),1003682,2012-12-17,product.list0,50,from stock,N/A,MCV26B,1,base.user_root,1890,คัน
+sale_order_1005987,ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),ส.แจ๋วแหว๋ว (โค้ว ส.เจริญ),1003682,2012-12-17,product.list0,60,from stock,N/A,MCV26P,1,base.user_root,1890,คัน
+sale_order_1005960,เจริญเมือง,เจริญเมือง,เจริญเมือง,1003655,2012-12-14,product.list0,20,from stock,N/A,MCV26Y,1,base.user_root,1890,คัน
+sale_order_1006258,"ซ่งซินหลี, หจก.","ซ่งซินหลี, หจก.","ซ่งซินหลี, หจก.",1003953,2013-01-08,product.list0,10,from stock,N/A,WCR20R,10,base.user_root,1370,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,70,from stock,N/A,WCR20R,1,base.user_root,1416,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,60,from stock,N/A,WCR20P,2,base.user_root,1416,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,50,from stock,N/A,WCR20SB,2,base.user_root,1416,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,90,from stock,N/A,WCR20SB,10,base.user_root,1371,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,190,from stock,"** ล้ออัลลอยด์, ยางไทย **",WCR20R,6,base.user_root,1450,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,200,from stock,"** ล้ออัลลอยด์, ยางไทย **",WCR20SB,6,base.user_root,1450,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,210,from stock,"** ล้ออัลลอยด์, ยางไทย **",WCR20P,8,base.user_root,1450,คัน
+sale_order_1006232,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003927,2013-01-05,product.list0,10,from stock,"** เบรคจานหลัง 90 mm., เบรคหน้าไทย, ยางไทย ** ส่งเดือน มี.ค. 56 **",WCR20R,20,base.user_root,1485,คัน
+sale_order_1006232,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003927,2013-01-05,product.list0,20,from stock,"** เบรคจานหลัง 90 mm., เบรคหน้าไทย, ยางไทย ** ส่งเดือน มี.ค.56",WCR20SB,20,base.user_root,1485,คัน
+sale_order_1006232,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003927,2013-01-05,product.list0,30,from stock,"** เบรคจานหลัง 90 mm., เบรคหน้าไทย, ยางไทย ** ส่งเดือน มี.ค. 56 **",WCR20P,50,base.user_root,1485,คัน
+sale_order_1006232,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003927,2013-01-05,product.list0,40,from stock,"** เบรคจานหลัง 90 mm., เบรคหน้าไทย, ยางไทย ** ส่งเดือน มี.ค. 56 **",WCR20W,10,base.user_root,1485,คัน
+sale_order_1006191,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003886,2013-01-04,product.list0,20,from stock,N/A,WCR20P,10,base.user_root,1371,คัน
+sale_order_1006191,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003886,2013-01-04,product.list0,30,from stock,N/A,WCR20W,10,base.user_root,1371,คัน
+sale_order_1006191,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003886,2013-01-04,product.list0,40,from stock,N/A,WCR20SB,10,base.user_root,1371,คัน
+sale_order_1006169,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003864,2013-01-03,product.list0,10,from stock,N/A,WCR20R,15,base.user_root,1371,คัน
+sale_order_1006169,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003864,2013-01-03,product.list0,20,from stock,N/A,WCR20SB,20,base.user_root,1371,คัน
+sale_order_1006169,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003864,2013-01-03,product.list0,30,from stock,N/A,WCR20P,15,base.user_root,1371,คัน
+sale_order_1006169,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003864,2013-01-03,product.list0,40,from stock,N/A,WCR20W,15,base.user_root,1371,คัน
+sale_order_1006176,"ซ่งซินหลี, หจก.","ซ่งซินหลี, หจก.","ซ่งซินหลี, หจก.",1003871,2013-01-03,product.list0,70,from stock,N/A,WCR20P,10,base.user_root,1370,คัน
+sale_order_1006176,"ซ่งซินหลี, หจก.","ซ่งซินหลี, หจก.","ซ่งซินหลี, หจก.",1003871,2013-01-03,product.list0,80,from stock,N/A,WCR20SB,10,base.user_root,1370,คัน
+sale_order_1006026,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003721,2012-12-19,product.list0,10,from stock,N/A,WCR20W,1,base.user_root,1417,คัน
+sale_order_1006026,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003721,2012-12-19,product.list0,40,from stock,N/A,WCR20P,5,base.user_root,1417,คัน
+sale_order_1005930,ศิริยานยนต์,ศิริยานยนต์,ศิริยานยนต์,1003625,2012-12-12,product.list0,10,from stock,N/A,WCR20P,3,base.user_root,1371,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,40,from stock,N/A,WCR24W,1,base.user_root,1463,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,30,from stock,N/A,WCR24R,2,base.user_root,1463,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,20,from stock,N/A,WCR24P,3,base.user_root,1463,คัน
+sale_order_1005598,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003293,2012-11-14,product.list0,10,from stock,N/A,WCR24SB,3,base.user_root,1463,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,10,from stock,N/A,WCR24P,2,base.user_root,1463,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,20,from stock,N/A,WCR24SB,2,base.user_root,1463,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,50,from stock,N/A,WCR24R,10,base.user_root,1417,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,70,from stock,N/A,WCR24P,10,base.user_root,1417,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,10,from stock,N/A,WCR24SB,8,base.user_root,1417,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,20,from stock,N/A,WCR24R,7,base.user_root,1417,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,30,from stock,N/A,WCR24P,5,base.user_root,1417,คัน
+sale_order_1006193,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003888,2013-01-04,product.list0,10,from stock,N/A,WCR24P,8,base.user_root,1417,คัน
+sale_order_1006193,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003888,2013-01-04,product.list0,20,from stock,N/A,WCR24SB,5,base.user_root,1417,คัน
+sale_order_1006193,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003888,2013-01-04,product.list0,30,from stock,N/A,WCR24R,5,base.user_root,1417,คัน
+sale_order_1006193,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003888,2013-01-04,product.list0,40,from stock,N/A,WCR24W,2,base.user_root,1417,คัน
+sale_order_1006151,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003846,2012-12-28,product.list0,40,from stock,N/A,WCR24R,2,base.user_root,1420,คัน
+sale_order_1006151,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003846,2012-12-28,product.list0,50,from stock,N/A,WCR24SB,3,base.user_root,1420,คัน
+sale_order_1006151,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003846,2012-12-28,product.list0,60,from stock,N/A,WCR24P,3,base.user_root,1420,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,10,from stock,"** ยางไทย, ล้ออัลลอยด์ **",WCR24R,8,base.user_root,1495,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,20,from stock,"** ยางไทย, ล้ออัลลอยด์ **",WCR24SB,8,base.user_root,1495,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,30,from stock,"** ยางไทย, ล้ออัลลอยด์ **",WCR24P,4,base.user_root,1495,คัน
+sale_order_1006066,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003761,2012-12-21,product.list0,10,from stock,"* ยางไทย , ล้ออัลลอย * ราคาเนต",WCR24R,10,base.user_root,1495,คัน
+sale_order_1006066,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003761,2012-12-21,product.list0,20,from stock,"* ยางไทย , ล้ออัลลอย * ราคาเนต",WCR24SB,6,base.user_root,1495,คัน
+sale_order_1006066,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003761,2012-12-21,product.list0,30,from stock,"* ยางไทย , ล้ออัลลอย * ราคาเนต *",WCR24P,4,base.user_root,1495,คัน
+sale_order_1005899,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003594,2012-12-10,product.list0,30,from stock,"** ยางไทย, ล้ออัลลอยด์ **",WCR24P,4,base.user_root,1540,คัน
+sale_order_1005899,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003594,2012-12-10,product.list0,20,from stock,"** ยางไทย, ล้ออัลลอย **",WCR24SB,3,base.user_root,1416,คัน
+sale_order_1005899,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003594,2012-12-10,product.list0,10,from stock,"** ยางไทย, ล้ออัลลอยด์ **",WCR24R,3,base.user_root,1540,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,10,from stock,N/A,MFV27K,1,base.user_root,5391,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,20,from stock,N/A,MFV27W,1,base.user_root,5391,คัน
+sale_order_1006194,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003889,2013-01-04,product.list0,40,from stock,N/A,MFV27W,1,base.user_root,6290,คัน
+sale_order_1005813,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003508,2012-12-03,product.list0,30,from stock,** ส่งสินค้าร้าน PS ไบท์ 74/72 ถ.เนนแก้ว ต.ท่าพี่เลี้ยง อ.เมือง จ.สุพรรณบุรี ส่งแต้พังเฮงขนส่ง จาก.ข่วงสิงห์ไบท์ **,MFV27W,1,base.user_root,4880,คัน
+sale_order_1005813,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003508,2012-12-03,product.list0,20,from stock,** ส่งสินค้าที่ร้าน PS ไบท์ 74/72 ถ.เนนแก้ว ต.ท่าพี่เลี้ยง อ.เมือง จ.สุพรรณบุรี ส่งแต้พังเฮงขนส่ง จาก.ข่วงสิงห์ไบท์ **,MFV27Y,1,base.user_root,4880,คัน
+sale_order_1005813,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003508,2012-12-03,product.list0,10,from stock,** ส่งสินค้าที่ร้าน PS ไบท์ 74/72 ถ.เนนแก้ว ต.ท่าพี่เลี้ยง อ.เมือง จ.สุพรรณบุรี ส่งแต้พังเฮงขนส่ง จาก.ข่วงสิงห์ไบท์ **,MFV27K,1,base.user_root,4880,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,40,from stock,** ส่งของที่สุพรรณ **,MFS20W,1,base.user_root,2231,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,50,from stock,** ส่งของที่สุพรรณ **,MFS20K,1,base.user_root,2231,คัน
+sale_order_1006199,รามาทีวี,รามาทีวี,รามาทีวี,1003894,2013-01-05,product.list0,40,from stock,N/A,MFS20W,1,base.user_root,2360,คัน
+sale_order_1006199,รามาทีวี,รามาทีวี,รามาทีวี,1003894,2013-01-05,product.list0,50,from stock,N/A,MFS20K,1,base.user_root,2360,คัน
+sale_order_1006225,K P J Bicycle Shop,K P J Bicycle Shop,K P J Bicycle Shop,1003920,2013-01-05,product.list0,10,from stock,** ส่งธนาชัยขนส่ง **,MFS20K,3,base.user_root,2360,คัน
+sale_order_1006225,K P J Bicycle Shop,K P J Bicycle Shop,K P J Bicycle Shop,1003920,2013-01-05,product.list0,20,from stock,** ส่งธนาชัยขนส่ง **,MFS20W,3,base.user_root,2360,คัน
+sale_order_1006128,ซ.สหยนต์,ซ.สหยนต์,ซ.สหยนต์,1003823,2012-12-26,product.list0,30,from stock,N/A,MFS20K,1,base.user_root,2360,คัน
+sale_order_1006072,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003767,2012-12-21,product.list0,40,from stock,N/A,MFS20W,2,base.user_root,2231,คัน
+sale_order_1006075,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003770,2012-12-21,product.list0,10,from stock,N/A,MGB12R,10,base.user_root,730,คัน
+sale_order_1005986,พรทิพย์อะไหล่,พรทิพย์อะไหล่,พรทิพย์อะไหล่,1003681,2012-12-17,product.list0,10,from stock,N/A,MGB12R,1,base.user_root,730,คัน
+sale_order_1005986,พรทิพย์อะไหล่,พรทิพย์อะไหล่,พรทิพย์อะไหล่,1003681,2012-12-17,product.list0,20,from stock,N/A,MGB12SB,-1,base.user_root,730,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,40,from stock,** nobox ** ไม่เอายางนอกของ TR.,MHR20C,20,base.user_root,1375,คัน
+sale_order_1005599,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003294,2012-11-14,product.list0,10,from stock,N/A,MHR20C,5,base.user_root,1410,คัน
+sale_order_1006209,รุ่งกิจจักรยาน,รุ่งกิจจักรยาน,รุ่งกิจจักรยาน,1003904,2013-01-05,product.list0,10,from stock,N/A,MHR20C,20,base.user_root,1377,คัน
+sale_order_1006219,"ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ","ไทยเจริญจักรยาน,ลำปลายมาศ",1003914,2013-01-05,product.list0,10,from stock,** ราคาเนต **,MHR20C,10,base.user_root,1335,คัน
+sale_order_1006192,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003887,2013-01-04,product.list0,10,from stock,N/A,MHR20C,30,base.user_root,1377,คัน
+sale_order_1005742,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003437,2012-11-27,product.list0,180,from stock,* ราคาเนต * ใช้เป็น หลักอานโค้ง *  nobox,MHR20C,30,base.user_root,1330,คัน
+sale_order_1006033,นิวจักรยานศิลป์,นิวจักรยานศิลป์,นิวจักรยานศิลป์,1003728,2012-12-19,product.list0,10,from stock,N/A,MHR20C,20,base.user_root,1377,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,70,from stock,N/A,EBK002,1,base.user_root,8906,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,80,from stock,N/A,EBK003,1,base.user_root,8906,คัน
+sale_order_1005534,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003229,2012-11-09,product.list0,10,from stock,** ราคาเนต **,EBK002,1,base.user_root,8906,คัน
+sale_order_1005648,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003343,2012-11-20,product.list0,30,from stock,** ราคาเนต **,EBK001,1,base.user_root,8640,คัน
+sale_order_1005648,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003343,2012-11-20,product.list0,10,from stock,** ราคาเนต **,EBK003,1,base.user_root,8640,คัน
+sale_order_1005676,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,1003371,2012-11-22,product.list0,10,from stock,** ราคาเนต **,EBK003,1,base.user_root,8640,คัน
+sale_order_1006228,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003923,2013-01-05,product.list0,10,from stock,** ตะเกียบธรรมดา ** ด่วน!,EBK003,1,base.user_root,8906,คัน
+sale_order_1006228,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003923,2013-01-05,product.list0,20,from stock,** ตะเกียบธรรมดา ** ด่วน!,EBK004,1,base.user_root,8906,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,20,from stock,* ราคาเนต *,EBK004,1,base.user_root,8639,คัน
+sale_order_1005723,"โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน","โอเวอร์ซี, ร้าน",1003418,2012-11-26,product.list0,10,from stock,* ราคาเนต *,EBK003,1,base.user_root,8639,คัน
+sale_order_1006177,สามชัย,สามชัย,สามชัย,1003872,2013-01-03,product.list0,20,from stock,N/A,EBK003,1,base.user_root,8906,คัน
+sale_order_1006177,สามชัย,สามชัย,สามชัย,1003872,2013-01-03,product.list0,30,from stock,N/A,EBK004,1,base.user_root,8906,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,50,from stock,N/A,EBK003,4,base.user_root,8906,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,60,from stock,N/A,EBK004,4,base.user_root,8906,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,70,from stock,N/A,EBK001,4,base.user_root,8906,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,80,from stock,N/A,EBK002,3,base.user_root,8906,คัน
+sale_order_1005856,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003551,2012-12-06,product.list0,40,from stock,** ราคาเนต **,EBK002,1,base.user_root,8639,คัน
+sale_order_1005856,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003551,2012-12-06,product.list0,30,from stock,** ราคาเนต **,EBK004,1,base.user_root,8639,คัน
+sale_order_1005856,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003551,2012-12-06,product.list0,20,from stock,** ราคาเนต **,EBK001,1,base.user_root,8639,คัน
+sale_order_1005856,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003551,2012-12-06,product.list0,10,from stock,** ราคาเนต **,EBK003,1,base.user_root,8639,คัน
+sale_order_1005855,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003550,2012-12-06,product.list0,40,from stock,** ราคาเนต **,EBK004,1,base.user_root,8639,คัน
+sale_order_1005855,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003550,2012-12-06,product.list0,30,from stock,** ราคาเนต **,EBK002,1,base.user_root,8639,คัน
+sale_order_1005855,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003550,2012-12-06,product.list0,20,from stock,** ราคาเนต **,EBK003,1,base.user_root,8639,คัน
+sale_order_1005855,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003550,2012-12-06,product.list0,10,from stock,** ราคาเนต **,EBK001,1,base.user_root,8639,คัน
+sale_order_1006071,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003766,2012-12-21,product.list0,10,from stock,N/A,EBK003,2,base.user_root,8906,คัน
+sale_order_1006071,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003766,2012-12-21,product.list0,20,from stock,N/A,EBK004,1,base.user_root,8906,คัน
+sale_order_1006071,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003766,2012-12-21,product.list0,30,from stock,N/A,EBK001,1,base.user_root,8906,คัน
+sale_order_1006071,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003766,2012-12-21,product.list0,40,from stock,N/A,EBK002,1,base.user_root,8906,คัน
+sale_order_1006256,สวนธน ไบค์พลัส,สวนธน ไบค์พลัส,สวนธน ไบค์พลัส,1003951,2013-01-08,product.list0,10,from stock,** ราคาเนต **,EBK008,1,base.user_root,9900,คัน
+sale_order_1006256,สวนธน ไบค์พลัส,สวนธน ไบค์พลัส,สวนธน ไบค์พลัส,1003951,2013-01-08,product.list0,20,from stock,** ราคาเนต **,EBK005,1,base.user_root,9900,คัน
+sale_order_1005676,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,1003371,2012-11-22,product.list0,20,from stock,** ราคาเนต **,EBK008,1,base.user_root,9310,คัน
+sale_order_1006177,สามชัย,สามชัย,สามชัย,1003872,2013-01-03,product.list0,10,from stock,N/A,EBK007,1,base.user_root,9596,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,90,from stock,N/A,EBK007,3,base.user_root,9596,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,100,from stock,N/A,EBK008,3,base.user_root,9596,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,110,from stock,N/A,EBK005,2,base.user_root,9596,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,120,from stock,N/A,EBK006,2,base.user_root,9596,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,130,from stock,N/A,EBK007,1,base.user_root,9596,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,140,from stock,N/A,EBK008,1,base.user_root,9596,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,150,from stock,N/A,EBK005,1,base.user_root,9596,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,160,from stock,N/A,EBK006,1,base.user_root,9596,คัน
+sale_order_1005865,ศรีสะเกษจักรยาน,ศรีสะเกษจักรยาน,ศรีสะเกษจักรยาน,1003560,2012-12-07,product.list0,10,from stock,N/A,EBK007,1,base.user_root,9596,คัน
+sale_order_1006264,"พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด","พงษ์เจริญจักรยาน, ร้อยเอ็ด",1003959,2013-01-08,product.list0,10,from stock,N/A,EBK013,1,base.user_root,11666,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,30,from stock,N/A,EBK012,1,base.user_root,11666,คัน
+sale_order_1006234,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003929,2013-01-07,product.list0,40,from stock,N/A,EBK013,1,base.user_root,11666,คัน
+sale_order_1005467,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003162,2012-11-03,product.list0,40,from stock,** ราคาเนต **,EBK012,1,base.user_root,11315,คัน
+sale_order_1006238,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003933,2013-01-07,product.list0,10,from stock,N/A,EBK014,1,base.user_root,11666,คัน
+sale_order_1006238,"ป.ไบค์, ร้าน","ป.ไบค์, ร้าน","ป.ไบค์, ร้าน",1003933,2013-01-07,product.list0,20,from stock,N/A,EBK013,1,base.user_root,11666,คัน
+sale_order_1005467,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003162,2012-11-03,product.list0,30,from stock,** ราคาเนต **,EBK013,3,base.user_root,11315,คัน
+sale_order_1005467,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003162,2012-11-03,product.list0,20,from stock,** ราคาเนต **,EBK014,3,base.user_root,11315,คัน
+sale_order_1005467,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003162,2012-11-03,product.list0,10,from stock,** ราคาเนต **,EBK016,3,base.user_root,11315,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,10,from stock,N/A,EBK016,8,base.user_root,11666,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,20,from stock,N/A,EBK014,8,base.user_root,11666,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,30,from stock,N/A,EBK012,3,base.user_root,11666,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,40,from stock,N/A,EBK013,8,base.user_root,11666,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,50,from stock,N/A,EBK015,3,base.user_root,11666,คัน
+sale_order_1005673,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,1003368,2012-11-21,product.list0,40,from stock,* ราคาเนต **,EBK013,1,base.user_root,11315,คัน
+sale_order_1005673,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,1003368,2012-11-21,product.list0,30,from stock,** ราคาเนต **,EBK014,1,base.user_root,11315,คัน
+sale_order_1005673,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,LA BIKE SHOP อุบล,1003368,2012-11-21,product.list0,10,from stock,** ราคาเนต **,EBK016,1,base.user_root,11315,คัน
+sale_order_1006231,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003926,2013-01-05,product.list0,10,from stock,N/A,EBK012,1,base.user_root,11666,คัน
+sale_order_1006231,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003926,2013-01-05,product.list0,20,from stock,N/A,EBK013,1,base.user_root,11666,คัน
+sale_order_1006192,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003887,2013-01-04,product.list0,20,from stock,** ด่วน! **,EBK015,1,base.user_root,11666,คัน
+sale_order_1005767,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003462,2012-11-30,product.list0,30,from stock,** ราคาเนต **,EBK013,1,base.user_root,11315,คัน
+sale_order_1005767,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003462,2012-11-30,product.list0,10,from stock,** ราคาเนต **,EBK016,1,base.user_root,11315,คัน
+sale_order_1005792,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,1003487,2012-12-01,product.list0,30,from stock,N/A,EBK014,1,base.user_root,11830,คัน
+sale_order_1005792,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,1003487,2012-12-01,product.list0,20,from stock,N/A,EBK013,1,base.user_root,11830,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,130,from stock,N/A,EBK016,2,base.user_root,11666,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,140,from stock,N/A,EBK014,2,base.user_root,11666,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,150,from stock,N/A,EBK015,2,base.user_root,11666,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,160,from stock,N/A,EBK012,2,base.user_root,11666,คัน
+sale_order_1006135,"ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.","ชัยชนะ ออโต้ไบท์, หจก.",1003830,2012-12-26,product.list0,170,from stock,N/A,EBK013,2,base.user_root,11666,คัน
+sale_order_1006087,วี.เอส.ไซเคิล,วี.เอส.ไซเคิล,วี.เอส.ไซเคิล,1003782,2012-12-24,product.list0,10,from stock,"** ราคาพิเศษ รอบสุดท้าย order หน้าปรับเป็น 11,000.- **",EBK013,3,base.user_root,10800,คัน
+sale_order_1006087,วี.เอส.ไซเคิล,วี.เอส.ไซเคิล,วี.เอส.ไซเคิล,1003782,2012-12-24,product.list0,20,from stock,"** ราคาพิเศษ รอบสุดท้าย order หน้าปรับเป็น 11,000.- **",EBK014,2,base.user_root,10800,คัน
+sale_order_1006027,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003722,2012-12-19,product.list0,10,from stock,N/A,EBK015,1,base.user_root,11666,คัน
+sale_order_1005896,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003591,2012-12-10,product.list0,90,from stock,N/A,EBK015,1,base.user_root,11666,คัน
+sale_order_1006030,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003725,2012-12-19,product.list0,10,from stock,N/A,EBK014,1,base.user_root,11666,คัน
+sale_order_1005896,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003591,2012-12-10,product.list0,80,from stock,N/A,EBK012,1,base.user_root,11666,คัน
+sale_order_1005896,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003591,2012-12-10,product.list0,70,from stock,N/A,EBK014,1,base.user_root,11666,คัน
+sale_order_1005896,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003591,2012-12-10,product.list0,50,from stock,N/A,EBK016,1,base.user_root,11666,คัน
+sale_order_1005980,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003675,2012-12-17,product.list0,10,from stock,N/A,EBK015,1,base.user_root,11666,คัน
+sale_order_1005980,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003675,2012-12-17,product.list0,20,from stock,N/A,EBK013,1,base.user_root,11666,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,140,from stock,** ราคาเนต **,MMX20K,1,base.user_root,2145,คัน
+sale_order_1005660,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003355,2012-11-20,product.list0,130,from stock,** ราคาเนต **,MMX20W,1,base.user_root,2145,คัน
+sale_order_1006021,"วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา",1003716,2012-12-19,product.list0,80,from stock,N/A,MMX20K,1,base.user_root,2211,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,70,from stock,N/A,XMN20R,2,base.user_root,2100,คัน
+sale_order_1006150,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003845,2012-12-28,product.list0,10,from stock,N/A,XMN20K,1,base.user_root,2000,คัน
+sale_order_1006150,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003845,2012-12-28,product.list0,20,from stock,N/A,XMN20R,1,base.user_root,2100,คัน
+sale_order_1006054,LA BIKE SHOP (ชัยพานิช),LA BIKE SHOP (ชัยพานิช),LA BIKE SHOP (ชัยพานิช),1003749,2012-12-20,product.list0,50,from stock,N/A,XMN20R,3,base.user_root,2100,คัน
+sale_order_1006126,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003821,2012-12-26,product.list0,10,from stock,N/A,MMS20R,1,base.user_root,2331,คัน
+sale_order_1006126,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003821,2012-12-26,product.list0,20,from stock,N/A,MMS20B,1,base.user_root,2331,คัน
+sale_order_1006126,นิยมกิจ,นิยมกิจ,นิยมกิจ,1003821,2012-12-26,product.list0,30,from stock,N/A,MMS20GD,1,base.user_root,2331,คัน
+sale_order_1006128,ซ.สหยนต์,ซ.สหยนต์,ซ.สหยนต์,1003823,2012-12-26,product.list0,40,from stock,N/A,MMS20B,1,base.user_root,2530,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,10,from stock,N/A,MMS20GD,1,base.user_root,2455,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,20,from stock,N/A,MMS20R,1,base.user_root,2455,คัน
+sale_order_1006272,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003967,2013-01-10,product.list0,10,from stock,N/A,MMS20K,10,base.user_root,2380,คัน
+sale_order_1006255,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003950,2013-01-08,product.list0,10,from stock,N/A,MMS20K,2,base.user_root,2380,คัน
+sale_order_1006255,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003950,2013-01-08,product.list0,20,from stock,N/A,MMS20SB,2,base.user_root,2380,คัน
+sale_order_1006255,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003950,2013-01-08,product.list0,30,from stock,N/A,MMS20P,2,base.user_root,2380,คัน
+sale_order_1006263,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003958,2013-01-08,product.list0,10,from stock,N/A,MMS20K,2,base.user_root,2380,คัน
+sale_order_1006263,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003958,2013-01-08,product.list0,20,from stock,N/A,MMS20SB,1,base.user_root,2380,คัน
+sale_order_1006263,เจริญการช่าง,เจริญการช่าง,เจริญการช่าง,1003958,2013-01-08,product.list0,30,from stock,N/A,MMS20P,1,base.user_root,2380,คัน
+sale_order_1005599,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003294,2012-11-14,product.list0,40,from stock,N/A,MMS20P,1,base.user_root,2454,คัน
+sale_order_1005599,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003294,2012-11-14,product.list0,30,from stock,N/A,MMS20SB,1,base.user_root,2454,คัน
+sale_order_1005599,มานพจักรยาน,มานพจักรยาน,มานพจักรยาน,1003294,2012-11-14,product.list0,20,from stock,N/A,MMS20K,1,base.user_root,2454,คัน
+sale_order_1006212,พูนสินจักรยาน,พูนสินจักรยาน,พูนสินจักรยาน,1003907,2013-01-05,product.list0,10,from stock,N/A,MMS20K,4,base.user_root,2380,คัน
+sale_order_1006212,พูนสินจักรยาน,พูนสินจักรยาน,พูนสินจักรยาน,1003907,2013-01-05,product.list0,30,from stock,N/A,MMS20P,3,base.user_root,2720,คัน
+sale_order_1006212,พูนสินจักรยาน,พูนสินจักรยาน,พูนสินจักรยาน,1003907,2013-01-05,product.list0,40,from stock,N/A,MMS20SB,3,base.user_root,2380,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,60,from stock,N/A,MMS20K,4,base.user_root,2380,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,70,from stock,N/A,MMS20W,2,base.user_root,2380,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,80,from stock,N/A,MMS20SB,2,base.user_root,2380,คัน
+sale_order_1006218,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003913,2013-01-05,product.list0,90,from stock,N/A,MMS20P,2,base.user_root,2380,คัน
+sale_order_1006221,"ดี.เอ็น.เค.ชุมแพ, หจก.","ดี.เอ็น.เค.ชุมแพ, หจก.","ดี.เอ็น.เค.ชุมแพ, หจก.",1003916,2013-01-05,product.list0,20,from stock,** ราคาเนต **,MMS20K,1,base.user_root,2310,คัน
+sale_order_1006221,"ดี.เอ็น.เค.ชุมแพ, หจก.","ดี.เอ็น.เค.ชุมแพ, หจก.","ดี.เอ็น.เค.ชุมแพ, หจก.",1003916,2013-01-05,product.list0,30,from stock,** ราคาเนต **,MMS20W,1,base.user_root,2310,คัน
+sale_order_1006230,Rayong city bike,Rayong city bike,Rayong city bike,1003925,2013-01-05,product.list0,30,from stock,N/A,MMS20K,2,base.user_root,2380,คัน
+sale_order_1006230,Rayong city bike,Rayong city bike,Rayong city bike,1003925,2013-01-05,product.list0,40,from stock,N/A,MMS20SB,2,base.user_root,2380,คัน
+sale_order_1006230,Rayong city bike,Rayong city bike,Rayong city bike,1003925,2013-01-05,product.list0,50,from stock,N/A,MMS20P,1,base.user_root,2380,คัน
+sale_order_1006170,"ซ้งจักรยาน, หจก.(สาขาเชียงใหม่)","ซ้งจักรยาน, หจก.(สาขาเชียงใหม่)","ซ้งจักรยาน, หจก.(สาขาเชียงใหม่)",1003865,2013-01-03,product.list0,10,from stock,N/A,MMS20K,4,base.user_root,2380,คัน
+sale_order_1006170,"ซ้งจักรยาน, หจก.(สาขาเชียงใหม่)","ซ้งจักรยาน, หจก.(สาขาเชียงใหม่)","ซ้งจักรยาน, หจก.(สาขาเชียงใหม่)",1003865,2013-01-03,product.list0,20,from stock,N/A,MMS20W,4,base.user_root,2380,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,20,from stock,N/A,MMS20P,1,base.user_root,2530,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,30,from stock,N/A,MMS20SB,1,base.user_root,2530,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,40,from stock,N/A,MMS20W,1,base.user_root,2530,คัน
+sale_order_1006154,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003849,2012-12-28,product.list0,10,from stock,N/A,MMS20K,2,base.user_root,2380,คัน
+sale_order_1006154,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003849,2012-12-28,product.list0,20,from stock,N/A,MMS20W,1,base.user_root,2380,คัน
+sale_order_1006154,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003849,2012-12-28,product.list0,30,from stock,N/A,MMS20P,2,base.user_root,2380,คัน
+sale_order_1006154,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003849,2012-12-28,product.list0,40,from stock,N/A,MMS20SB,2,base.user_root,2380,คัน
+sale_order_1006127,เอี่ยมเจริญ,เอี่ยมเจริญ,เอี่ยมเจริญ,1003822,2012-12-26,product.list0,30,from stock,N/A,MMS20SB,1,base.user_root,2530,คัน
+sale_order_1006127,เอี่ยมเจริญ,เอี่ยมเจริญ,เอี่ยมเจริญ,1003822,2012-12-26,product.list0,40,from stock,N/A,MMS20W,1,base.user_root,2530,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,30,from stock,N/A,OP13NV3000MK,1,base.user_root,9800,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,40,from stock,N/A,OP13NV3000MW,1,base.user_root,9800,คัน
+sale_order_1006214,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003909,2013-01-05,product.list0,10,from stock,** Pro 9900 ** ส่งเดือน ก.พ. 56 **,OP13NV3000MR,3,base.user_root,8167,คัน
+sale_order_1006214,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003909,2013-01-05,product.list0,20,from stock,** Pro 9900 ** ส่งเดือน ก.พ. 56 **,OP13NV3000MK,3,base.user_root,8167,คัน
+sale_order_1006214,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003909,2013-01-05,product.list0,30,from stock,** pro 99000 ** ส่งเดือน ก.พ. 56 **,OP13NV3000MW,3,base.user_root,8167,คัน
+sale_order_1006127,เอี่ยมเจริญ,เอี่ยมเจริญ,เอี่ยมเจริญ,1003822,2012-12-26,product.list0,20,from stock,N/A,OP13NV3000MW,1,base.user_root,8918,คัน
+sale_order_1005852,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003547,2012-12-06,product.list0,30,from stock,** ราคาเนต **,OP13NV3000MW,1,base.user_root,8642,คัน
+sale_order_1005852,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003547,2012-12-06,product.list0,20,from stock,** ราคาเนต **,OP13NV3000MR,1,base.user_root,8642,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,50,from stock,N/A,OP13NV3000SK,1,base.user_root,9800,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,60,from stock,** รายการแถม **,OP13NV3000SW,1,base.user_root,0,คัน
+sale_order_1006214,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003909,2013-01-05,product.list0,40,from stock,** Pro 9900 ** ส่งเดือน ก.พ. 56 **,OP13NV3000SR,1,base.user_root,8167,คัน
+sale_order_1006214,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003909,2013-01-05,product.list0,50,from stock,** Pro 9900 ** ส่งเดือน ก.พ. 56 **,OP13NV3000SK,1,base.user_root,8167,คัน
+sale_order_1006214,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003909,2013-01-05,product.list0,60,from stock,** Pro 9900 ** ส่งเดือน ก.พ. 56 **,OP13NV3000SW,1,base.user_root,8167,คัน
+sale_order_1006125,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003820,2012-12-26,product.list0,10,from stock,N/A,OP13NV3000SR,1,base.user_root,8918,คัน
+sale_order_1006125,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003820,2012-12-26,product.list0,20,from stock,N/A,OP13NV3000SK,1,base.user_root,8918,คัน
+sale_order_1006125,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003820,2012-12-26,product.list0,30,from stock,N/A,OP13NV3000SW,1,base.user_root,8918,คัน
+sale_order_1005852,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003547,2012-12-06,product.list0,40,from stock,** ราคาเนต **,OP13NV3000SW,1,base.user_root,8642,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,10,from stock,N/A,OP13NV4000MK,1,base.user_root,12950,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,170,from stock,N/A,OP13NV4000MK,1,base.user_root,11785,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,180,from stock,N/A,OP13NV4000MR,1,base.user_root,11785,คัน
+sale_order_1006094,กิจเสรี,กิจเสรี,กิจเสรี,1003789,2012-12-24,product.list0,30,from stock,N/A,OP13NV4000MR,1,base.user_root,18500,คัน
+sale_order_1006094,กิจเสรี,กิจเสรี,กิจเสรี,1003789,2012-12-24,product.list0,40,from stock,N/A,OP13NV4000MW,1,base.user_root,18500,คัน
+sale_order_1006094,กิจเสรี,กิจเสรี,กิจเสรี,1003789,2012-12-24,product.list0,50,from stock,N/A,OP13NV4000MK,1,base.user_root,18500,คัน
+sale_order_1006072,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003767,2012-12-21,product.list0,80,from stock,N/A,OP13NV4000MW,1,base.user_root,10792,คัน
+sale_order_1005861,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003556,2012-12-07,product.list0,60,from stock,N/A,OP13NV4000MW,1,base.user_root,10792,คัน
+sale_order_1005861,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003556,2012-12-07,product.list0,50,from stock,N/A,OP13NV4000MK,1,base.user_root,10792,คัน
+sale_order_1005861,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003556,2012-12-07,product.list0,40,from stock,N/A,OP13NV4000MR,1,base.user_root,10792,คัน
+sale_order_1006240,Rayong city bike,Rayong city bike,Rayong city bike,1003935,2013-01-07,product.list0,20,from stock,N/A,OP13NV4000SW,1,base.user_root,12950,คัน
+sale_order_1006125,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003820,2012-12-26,product.list0,40,from stock,N/A,OP13NV4000SR,1,base.user_root,11785,คัน
+sale_order_1006125,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003820,2012-12-26,product.list0,50,from stock,N/A,OP13NV4000SK,1,base.user_root,11785,คัน
+sale_order_1006125,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003820,2012-12-26,product.list0,60,from stock,N/A,OP13NV4000SW,1,base.user_root,11785,คัน
+sale_order_1006137,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,นงอะไหล่ยนต์ & คลังจักรยาน,1003832,2012-12-26,product.list0,100,from stock,N/A,OP13NV4000SW,1,base.user_root,11785,คัน
+sale_order_1006094,กิจเสรี,กิจเสรี,กิจเสรี,1003789,2012-12-24,product.list0,80,from stock,** รายการแถม โปรโมชั่นเปิดตัวสินค้า เดือนเดียว **,OP13NV4000SK,1,base.user_root,0,คัน
+sale_order_1005852,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003547,2012-12-06,product.list0,60,from stock,** ราคาเนต **,OP13NV4000SR,1,base.user_root,11420,คัน
+sale_order_1005861,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003556,2012-12-07,product.list0,30,from stock,N/A,OP13NV4000SW,1,base.user_root,10792,คัน
+sale_order_1005861,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003556,2012-12-07,product.list0,20,from stock,N/A,OP13NV4000SK,1,base.user_root,10792,คัน
+sale_order_1005861,แสงเจริญ,แสงเจริญ,แสงเจริญ,1003556,2012-12-07,product.list0,10,from stock,N/A,OP13NV4000SR,1,base.user_root,10792,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,30,from stock,N/A,MPS24R13,1,base.user_root,3116,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,20,from stock,N/A,MPS26SB13,1,base.user_root,3246,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,70,from stock,N/A,MPS26G13,1,base.user_root,3246,คัน
+sale_order_1006117,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003812,2012-12-25,product.list0,80,from stock,N/A,MPS26R13,2,base.user_root,3246,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,10,from stock,"** ยางไทย, เบรคไทย, มีตะกร้า ** ส่งเดือน มี.ค. 56",RJC20R,10,base.user_root,1050,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,20,from stock,"** ยางไทย, เบรคไทย, มีตะกร้า ** ส่งเดือน มี.ค. 56",RJC20K,10,base.user_root,1050,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,30,from stock,"** ยางไทย, เบรคไทย, มีตะกร้า ** ส่งเดือน มี.ค. 56",RJC20P,10,base.user_root,1050,คัน
+sale_order_1006233,มีชัยจักรยาน,มีชัยจักรยาน,มีชัยจักรยาน,1003928,2013-01-07,product.list0,40,from stock,"** ยางไทย, เบรคไทย, มีตะกร้า ** ส่งเดือน มี.ค. 56",RJC20B,10,base.user_root,1050,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,40,from stock,N/A,RJC20R,8,base.user_root,940,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,50,from stock,N/A,RJC20B,8,base.user_root,940,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,60,from stock,N/A,RJC20P,7,base.user_root,940,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,70,from stock,N/A,RJC20K,7,base.user_root,940,คัน
+sale_order_1005661,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003356,2012-11-20,product.list0,30,from stock,** มีตะกร้า ** ราคาเนต,RJC20K,1,base.user_root,1030,คัน
+sale_order_1005661,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003356,2012-11-20,product.list0,20,from stock,*มีตะกร้า* ราคาเนต **,RJC20B,1,base.user_root,1030,คัน
+sale_order_1005661,จักรยานบรรเทิง,จักรยานบรรเทิง,จักรยานบรรเทิง,1003356,2012-11-20,product.list0,10,from stock,** มีตะกร้า ** ราคาเนต,RJC20R,1,base.user_root,1030,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,30,from stock,N/A,RJC24R,2,base.user_root,1008,คัน
+sale_order_1006205,"พลประไพร, ร้าน","พลประไพร, ร้าน","พลประไพร, ร้าน",1003900,2013-01-05,product.list0,40,from stock,N/A,RJC24B,2,base.user_root,1008,คัน
+sale_order_1006181,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003876,2013-01-04,product.list0,10,from stock,** มีตะกร้า ** ราคาเนต **,RJC24R,10,base.user_root,1025,คัน
+sale_order_1006181,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003876,2013-01-04,product.list0,20,from stock,** มีตะกร้า ** ราคาเนต **,RJC24P,10,base.user_root,1025,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,40,from stock,N/A,RJC24P,10,base.user_root,987,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,50,from stock,N/A,RJC24R,10,base.user_root,987,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,60,from stock,N/A,RJC24K,10,base.user_root,987,คัน
+sale_order_1006167,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003862,2013-01-03,product.list0,10,from stock,"-มีตะกร้า, แฮนด์มินิพ่นสี * nobox",RJC24K,15,base.user_root,1055,คัน
+sale_order_1006167,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003862,2013-01-03,product.list0,20,from stock,"-มีตะกร้า, แฮนด์มินิพ่นสี * nobox",RJC24B,25,base.user_root,1055,คัน
+sale_order_1006167,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003862,2013-01-03,product.list0,30,from stock,"-มีตะกร้า, แฮนด์มินิพ่นสี * nobox",RJC24P,25,base.user_root,1055,คัน
+sale_order_1006167,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003862,2013-01-03,product.list0,40,from stock,"-มีตะกร้า, แฮนด์มินิพ่นสี * nobox",RJC24R,30,base.user_root,1055,คัน
+sale_order_1006148,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003843,2012-12-28,product.list0,10,from stock,"** มีตะกร้า, ล้ออัลลอยด์ ** nobox",RJC24R,5,base.user_root,1087,คัน
+sale_order_1006148,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003843,2012-12-28,product.list0,20,from stock,"** มีตะกร้า, ล้ออัลลอยด์ ** nobox",RJC24B,15,base.user_root,1087,คัน
+sale_order_1006148,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003843,2012-12-28,product.list0,30,from stock,"** มีตะกร้า, ล้ออัลลอยด์ ** nobox",RJC24P,5,base.user_root,1087,คัน
+sale_order_1006148,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003843,2012-12-28,product.list0,40,from stock,"** มีตะกร้า, ล้ออัลลอยด์ ** nobox **",RJC24K,5,base.user_root,1087,คัน
+sale_order_1005815,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003510,2012-12-03,product.list0,30,from stock,** มีตะกร้า ** ราคาเนต **,RJC24P,20,base.user_root,1000,คัน
+sale_order_1005815,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003510,2012-12-03,product.list0,20,from stock,** มีตะกร้า ** ราคาเนต **,RJC24B,10,base.user_root,1000,คัน
+sale_order_1005815,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003510,2012-12-03,product.list0,10,from stock,** มีตะกร้า ** ราคาเนต **,RJC24R,10,base.user_root,1000,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,40,from stock,** มีตะกร้า **,RJC24K,3,base.user_root,1000,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,50,from stock,** มีตะกร้า **,RJC24P,3,base.user_root,1000,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,60,from stock,** มีตะกร้า **,RJC24B,7,base.user_root,1000,คัน
+sale_order_1006063,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003758,2012-12-21,product.list0,70,from stock,** มีตะกร้า **,RJC24R,7,base.user_root,1000,คัน
+sale_order_1005983,ดีชัย,ดีชัย,ดีชัย,1003678,2012-12-17,product.list0,10,from stock,** มีตะกร้า **,RJC24R,2,base.user_root,1055,คัน
+sale_order_1005983,ดีชัย,ดีชัย,ดีชัย,1003678,2012-12-17,product.list0,20,from stock,** มีตะกร้า **,RJC24B,3,base.user_root,1055,คัน
+sale_order_1005983,ดีชัย,ดีชัย,ดีชัย,1003678,2012-12-17,product.list0,30,from stock,** มีตะกร้า **,RJC24P,3,base.user_root,1055,คัน
+sale_order_1005983,ดีชัย,ดีชัย,ดีชัย,1003678,2012-12-17,product.list0,40,from stock,** มีตะกร้า **,RJC24K,2,base.user_root,1055,คัน
+sale_order_1005922,สมบัติ จักรยาน,สมบัติ จักรยาน,สมบัติ จักรยาน,1003617,2012-12-12,product.list0,40,from stock,N/A,RJC24P,4,base.user_root,1057,คัน
+sale_order_1005922,สมบัติ จักรยาน,สมบัติ จักรยาน,สมบัติ จักรยาน,1003617,2012-12-12,product.list0,30,from stock,** มีตะกร้า **,RJC24K,4,base.user_root,1057,คัน
+sale_order_1005922,สมบัติ จักรยาน,สมบัติ จักรยาน,สมบัติ จักรยาน,1003617,2012-12-12,product.list0,20,from stock,** มีตะกร้า **,RJC24B,4,base.user_root,1057,คัน
+sale_order_1005922,สมบัติ จักรยาน,สมบัติ จักรยาน,สมบัติ จักรยาน,1003617,2012-12-12,product.list0,10,from stock,** มีตะกร้า **,RJC24R,4,base.user_root,1057,คัน
+sale_order_1006000,สารคามอะไหล่,สารคามอะไหล่,สารคามอะไหล่,1003695,2012-12-17,product.list0,10,from stock,"** มีตะกร้า, ยางไทย ** ราคาเนต **",RJC24R,10,base.user_root,1070,คัน
+sale_order_1006000,สารคามอะไหล่,สารคามอะไหล่,สารคามอะไหล่,1003695,2012-12-17,product.list0,20,from stock,"** มีตะกร้า, ยางไทย ** ราคาเนต",RJC24B,10,base.user_root,1070,คัน
+sale_order_1006000,สารคามอะไหล่,สารคามอะไหล่,สารคามอะไหล่,1003695,2012-12-17,product.list0,30,from stock,"** มีตะกร้า, ยางไทย ** ราคาเนต",RJC24K,5,base.user_root,1070,คัน
+sale_order_1006000,สารคามอะไหล่,สารคามอะไหล่,สารคามอะไหล่,1003695,2012-12-17,product.list0,40,from stock,"** มีตะกร้า, ยางไทย ** ราคาเนต",RJC24P,5,base.user_root,1070,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,60,from stock,** ส่งของที่สุพรรณ **,MSP7CW,1,base.user_root,3632,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,70,from stock,** ส่งของที่สุพรรณ **,MSP7CK,1,base.user_root,3632,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,80,from stock,** ส่งของที่สุพรรณ **,MSP7CSB,1,base.user_root,3632,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,10,from stock,N/A,MSP7CK,4,base.user_root,3632,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,20,from stock,N/A,MSP7CW,4,base.user_root,3632,คัน
+sale_order_1006244,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003939,2013-01-07,product.list0,30,from stock,N/A,MSP7CSB,2,base.user_root,3632,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,70,from stock,N/A,MSP7CK,1,base.user_root,3632,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,80,from stock,N/A,MSP7CW,1,base.user_root,3632,คัน
+sale_order_1006220,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,อำนวยชัยจักรยาน,1003915,2013-01-05,product.list0,90,from stock,N/A,MSP7CSB,1,base.user_root,3632,คัน
+sale_order_1006221,"ดี.เอ็น.เค.ชุมแพ, หจก.","ดี.เอ็น.เค.ชุมแพ, หจก.","ดี.เอ็น.เค.ชุมแพ, หจก.",1003916,2013-01-05,product.list0,10,from stock,** ราคาเนต **,MSP7CW,1,base.user_root,3520,คัน
+sale_order_1006141,สมพงษ์การค้า,สมพงษ์การค้า,สมพงษ์การค้า,1003836,2012-12-26,product.list0,10,from stock,N/A,MSP7CW,1,base.user_root,3996,คัน
+sale_order_1006116,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003811,2012-12-25,product.list0,20,from stock,N/A,MSP7CW,1,base.user_root,3996,คัน
+sale_order_1006056,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,1003751,2012-12-21,product.list0,30,from stock,** ราคาเนต **,MSP7CK,1,base.user_root,3996,คัน
+sale_order_1006056,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,1003751,2012-12-21,product.list0,40,from stock,** ราคาเนต **,MSP7CW,1,base.user_root,3996,คัน
+sale_order_1006056,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,กู๊ดไบค์ซิเคิล เซ็นเตอร์,1003751,2012-12-21,product.list0,50,from stock,** ราคาเนต **,MSP7CSB,1,base.user_root,3996,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,70,from stock,** ทุกรายการใช้ชัยวัฒขนส่ง **,MSP7CK,1,base.user_root,3876,คัน
+sale_order_1005827,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003522,2012-12-06,product.list0,10,from stock,N/A,MSP7CW,-1,base.user_root,3996,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,10,from stock,N/A,MST24K,3,base.user_root,1488,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,20,from stock,N/A,MST24B,3,base.user_root,1488,คัน
+sale_order_1006138,"ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน","ศุภางค์ พานิชย์, ร้าน",1003833,2012-12-26,product.list0,30,from stock,N/A,MST24R,3,base.user_root,1488,คัน
+sale_order_1005456,ไฮไบด์,ไฮไบด์,ไฮไบด์,1003151,2012-11-02,product.list0,50,from stock,N/A,MST27Y,2,base.user_root,3865,คัน
+sale_order_1005456,ไฮไบด์,ไฮไบด์,ไฮไบด์,1003151,2012-11-02,product.list0,40,from stock,N/A,MST27G,2,base.user_root,3865,คัน
+sale_order_1005486,สมรักษ์จักรยาน,สมรักษ์จักรยาน,สมรักษ์จักรยาน,1003181,2012-11-03,product.list0,40,from stock,** ราคาเนต **,MST27Y,1,base.user_root,3740,คัน
+sale_order_1005486,สมรักษ์จักรยาน,สมรักษ์จักรยาน,สมรักษ์จักรยาน,1003181,2012-11-03,product.list0,20,from stock,** ราคาเนต **,MST27SB,1,base.user_root,3740,คัน
+sale_order_1005486,สมรักษ์จักรยาน,สมรักษ์จักรยาน,สมรักษ์จักรยาน,1003181,2012-11-03,product.list0,10,from stock,** ราคาเนต **,MST27G,2,base.user_root,3740,คัน
+sale_order_1005466,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003161,2012-11-03,product.list0,20,from stock,** ราคาเนต ** ส่งชัยวัฒพัฒนาขนส่ง **,MST27G,1,base.user_root,4000,คัน
+sale_order_1005466,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003161,2012-11-03,product.list0,10,from stock,** ราคาเนต ** ส่งชัยวัฒพัฒนาขนส่ง **,MST27SB,1,base.user_root,4000,คัน
+sale_order_1005505,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003200,2012-11-05,product.list0,70,from stock,** ราคาเนต **,MST27G,2,base.user_root,3740,คัน
+sale_order_1005505,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003200,2012-11-05,product.list0,60,from stock,** ราคาเนต **,MST27SB,2,base.user_root,3740,คัน
+sale_order_1005505,"แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี","แสงอรุณ, สระบุรี",1003200,2012-11-05,product.list0,50,from stock,** ราคาเนต **,MST27Y,2,base.user_root,3740,คัน
+sale_order_1005559,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003254,2012-11-12,product.list0,30,from stock,** ราคาเนต **,MST27SB,2,base.user_root,3740,คัน
+sale_order_1005686,ไล่ฮะจักรยาน,ไล่ฮะจักรยาน,ไล่ฮะจักรยาน,1003381,2012-11-23,product.list0,20,from stock,** ราคาเนต **,MST27SB,1,base.user_root,4000,คัน
+sale_order_1005751,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003446,2012-11-28,product.list0,40,from stock,** ราคาเนต **,MST27Y,1,base.user_root,3740,คัน
+sale_order_1005751,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003446,2012-11-28,product.list0,30,from stock,** ราคาเนต **,MST27SB,2,base.user_root,3740,คัน
+sale_order_1005751,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003446,2012-11-28,product.list0,20,from stock,** ราคาเนต **,MST27G,2,base.user_root,3740,คัน
+sale_order_1005751,"หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.","หยูฮะเฮงหนองคาย, หจก.",1003446,2012-11-28,product.list0,10,from stock,** ราคาเนต **,MST27W,2,base.user_root,3740,คัน
+sale_order_1005769,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003464,2012-11-30,product.list0,30,from stock,** ราคาเนต **,MST27G,2,base.user_root,4000,คัน
+sale_order_1005769,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003464,2012-11-30,product.list0,20,from stock,** ราคาเนต **,MST27Y,1,base.user_root,4000,คัน
+sale_order_1005769,"เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)","เจริญจักรยานดี, ขอนแก่น(เม้ง)",1003464,2012-11-30,product.list0,10,from stock,** ราคาเนต **,MST27SB,1,base.user_root,4000,คัน
+sale_order_1005836,นายจันทร์,นายจันทร์,นายจันทร์,1003531,2012-12-06,product.list0,40,from stock,** ราคาเนต **,MST27G,1,base.user_root,3740,คัน
+sale_order_1005836,นายจันทร์,นายจันทร์,นายจันทร์,1003531,2012-12-06,product.list0,30,from stock,** ราคาเนต **,MST27Y,1,base.user_root,3740,คัน
+sale_order_1005836,นายจันทร์,นายจันทร์,นายจันทร์,1003531,2012-12-06,product.list0,20,from stock,** ราคาเนต **,MST27SB,1,base.user_root,3740,คัน
+sale_order_1005836,นายจันทร์,นายจันทร์,นายจันทร์,1003531,2012-12-06,product.list0,10,from stock,** ราคาเนต **,MST27W,1,base.user_root,3740,คัน
+sale_order_1005832,"วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา",1003527,2012-12-06,product.list0,20,from stock,** ราคาเนต **,MST27SB,1,base.user_root,4007,คัน
+sale_order_1005832,"วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา",1003527,2012-12-06,product.list0,10,from stock,** ราคาเนต **,MST27Y,1,base.user_root,4007,คัน
+sale_order_1006021,"วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา",1003716,2012-12-19,product.list0,30,from stock,N/A,MST27Y,1,base.user_root,4131,คัน
+sale_order_1006021,"วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา","วัฒนพานิช, อยุธยา",1003716,2012-12-19,product.list0,40,from stock,N/A,MST27SB,1,base.user_root,4131,คัน
+sale_order_1006194,"สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน","สยามพิจิตรริมน้ำ, ร้าน",1003889,2013-01-04,product.list0,50,from stock,N/A,MSU27GP,1,base.user_root,5592,คัน
+sale_order_1005455,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003150,2012-11-02,product.list0,270,from stock,** ไม่เอาฟรีไต้หวัน ** ส่ง 1/12/55 nobox,MSA20R,4,base.user_root,1479,คัน
+sale_order_1005455,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003150,2012-11-02,product.list0,260,from stock,** ไม่เอาฟรีไต้หวัน ** ส่ง 1/12/55 nobox,MSA20B,1,base.user_root,1479,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,10,from stock,** nobox ** ไม่เอายางนอกของ TR.,MSA20K,20,base.user_root,1442,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,20,from stock,** nobox ** ไม่เอายางนอกของ TR.,MSA20R,20,base.user_root,1442,คัน
+sale_order_1006241,อะหลั่ยกลการ,อะหลั่ยกลการ,อะหลั่ยกลการ,1003936,2013-01-07,product.list0,30,from stock,** nobox ** ไม่เอายางนอกของ TR.,MSA20B,20,base.user_root,1442,คัน
+sale_order_1005507,หาญพาณิช,หาญพาณิช,หาญพาณิช,1003202,2012-11-05,product.list0,10,from stock,** ราคาเนต **,MSA20K,6,base.user_root,1435,คัน
+sale_order_1005979,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003674,2012-12-17,product.list0,50,from stock,N/A,MSA20R,2,base.user_root,1479,คัน
+sale_order_1005979,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003674,2012-12-17,product.list0,60,from stock,N/A,MSA20B,2,base.user_root,1479,คัน
+sale_order_1005979,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003674,2012-12-17,product.list0,70,from stock,N/A,MSA20K,1,base.user_root,1479,คัน
+sale_order_1006267,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003962,2013-01-09,product.list0,20,from stock,N/A,MSL20K,10,base.user_root,1360,คัน
+sale_order_1006267,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003962,2013-01-09,product.list0,30,from stock,N/A,MSL20B,10,base.user_root,1360,คัน
+sale_order_1006267,เอกชัยจักรยาน,เอกชัยจักรยาน,เอกชัยจักรยาน,1003962,2013-01-09,product.list0,40,from stock,N/A,MSL20R,10,base.user_root,1360,คัน
+sale_order_1006195,สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),1003890,2013-01-04,product.list0,10,from stock,N/A,MSL20R,3,base.user_root,1360,คัน
+sale_order_1006195,สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),1003890,2013-01-04,product.list0,20,from stock,N/A,MSL20K,3,base.user_root,1360,คัน
+sale_order_1006195,สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),1003890,2013-01-04,product.list0,30,from stock,N/A,MSL20B,4,base.user_root,1360,คัน
+sale_order_1006121,ไก่นาฬิกา,ไก่นาฬิกา,ไก่นาฬิกา,1003816,2012-12-26,product.list0,10,from stock,N/A,MSL20R,4,base.user_root,1360,คัน
+sale_order_1006121,ไก่นาฬิกา,ไก่นาฬิกา,ไก่นาฬิกา,1003816,2012-12-26,product.list0,20,from stock,N/A,MSL20K,3,base.user_root,1360,คัน
+sale_order_1006121,ไก่นาฬิกา,ไก่นาฬิกา,ไก่นาฬิกา,1003816,2012-12-26,product.list0,30,from stock,N/A,MSL20B,3,base.user_root,1360,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,10,from stock,** ส่งของที่สุพรรณ **,MUL26RV2,2,base.user_root,5259,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,20,from stock,** ส่งของที่สุพรรณ **,MUL26KV2,2,base.user_root,5259,คัน
+sale_order_1006265,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,ข่วงสิงห์ไบร์ เชียงใหม่,1003960,2013-01-08,product.list0,30,from stock,** ส่งของที่สุพรรณ **,MUL26WV2,2,base.user_root,5259,คัน
+sale_order_1006152,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003847,2012-12-28,product.list0,10,from stock,** ราคาเนต,MUL26WV2,1,base.user_root,5100,คัน
+sale_order_1006128,ซ.สหยนต์,ซ.สหยนต์,ซ.สหยนต์,1003823,2012-12-26,product.list0,10,from stock,N/A,MUL26KV2,1,base.user_root,5259,คัน
+sale_order_1006128,ซ.สหยนต์,ซ.สหยนต์,ซ.สหยนต์,1003823,2012-12-26,product.list0,20,from stock,N/A,MUL26WV2,1,base.user_root,5259,คัน
+sale_order_1005852,"แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน","แฟ็ตฟรี, ร้านจักรยาน",1003547,2012-12-06,product.list0,10,from stock,** ราคาเนต **,MUL26RV2,1,base.user_root,5100,คัน
+sale_order_1005455,"เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน","เทพเจริญทรัพย์, ร้าน",1003150,2012-11-02,product.list0,20,from stock,** มีตะกร้า ** ไม่เอาฟรีไต้หวัน ** ส่งวันที่ 1/12/55 nobox,JXG12B,20,base.user_root,814,คัน
+sale_order_1006217,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003912,2013-01-05,product.list0,10,from stock,** มีตะกร้า **,JXG12B,4,base.user_root,850,คัน
+sale_order_1006181,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003876,2013-01-04,product.list0,30,from stock,** ไม่เอาตะแกรีงท้าย **,JXG12R,10,base.user_root,755,คัน
+sale_order_1006181,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003876,2013-01-04,product.list0,40,from stock,** ไม่เอาตะแกรงท้าย ** ราคาเนต **,JXG12B,10,base.user_root,755,คัน
+sale_order_1006181,เสมอการช่าง,เสมอการช่าง,เสมอการช่าง,1003876,2013-01-04,product.list0,50,from stock,** ไม่เอาตะแกรงท้าย ** ราคาเนต **,JXG12P,10,base.user_root,755,คัน
+sale_order_1006175,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003870,2013-01-03,product.list0,10,from stock,N/A,JXG12P,10,base.user_root,777,คัน
+sale_order_1006175,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003870,2013-01-03,product.list0,20,from stock,N/A,JXG12B,10,base.user_root,777,คัน
+sale_order_1006175,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003870,2013-01-03,product.list0,30,from stock,N/A,JXG12R,10,base.user_root,777,คัน
+sale_order_1005707,เจ.เซอร์วิส,เจ.เซอร์วิส,เจ.เซอร์วิส,1003402,2012-11-26,product.list0,40,from stock,N/A,JXG12B,10,base.user_root,777,คัน
+sale_order_1005707,เจ.เซอร์วิส,เจ.เซอร์วิส,เจ.เซอร์วิส,1003402,2012-11-26,product.list0,20,from stock,N/A,JXG12R,6,base.user_root,777,คัน
+sale_order_1006151,กิจเจริญ (เลย),กิจเจริญ (เลย),กิจเจริญ (เลย),1003846,2012-12-28,product.list0,30,from stock,** มีตะกร้า **,JXG12R,4,base.user_root,840,คัน
+sale_order_1006129,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003824,2012-12-26,product.list0,10,from stock,N/A,JXG12R,10,base.user_root,777,คัน
+sale_order_1006129,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003824,2012-12-26,product.list0,20,from stock,N/A,JXG12B,10,base.user_root,777,คัน
+sale_order_1006129,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003824,2012-12-26,product.list0,30,from stock,N/A,JXG12P,10,base.user_root,777,คัน
+sale_order_1005860,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003555,2012-12-06,product.list0,30,from stock,** มีตะกร้า **,JXG12P,10,base.user_root,812,คัน
+sale_order_1005860,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003555,2012-12-06,product.list0,20,from stock,** มีตะกร้า **,JXG12B,10,base.user_root,812,คัน
+sale_order_1005860,"เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี","เจริญจักรยาน, ราชบุรี",1003555,2012-12-06,product.list0,10,from stock,** มีตะกร้า **,JXG12R,10,base.user_root,812,คัน
+sale_order_1006029,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003724,2012-12-19,product.list0,10,from stock,N/A,JXG12R,20,base.user_root,777,คัน
+sale_order_1006029,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003724,2012-12-19,product.list0,20,from stock,N/A,JXG12B,20,base.user_root,777,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,50,from stock,N/A,JXG12B,24,base.user_root,777,คัน
+sale_order_1005887,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,ซุปเปอร์ทอยส์,1003582,2012-12-10,product.list0,40,from stock,N/A,JXG12R,26,base.user_root,777,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,120,from stock,** ยางไทย **,JXG12P,4,base.user_root,830,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,110,from stock,** ยางไทย **,JXG12B,4,base.user_root,830,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,100,from stock,** ยางไทย **,JXG12R,2,base.user_root,830,คัน
+sale_order_1006175,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003870,2013-01-03,product.list0,40,from stock,N/A,JXG14B,10,base.user_root,800,คัน
+sale_order_1006175,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003870,2013-01-03,product.list0,50,from stock,N/A,JXG14P,10,base.user_root,800,คัน
+sale_order_1006175,ชินรักษ์,ชินรักษ์,ชินรักษ์,1003870,2013-01-03,product.list0,60,from stock,N/A,JXG14R,10,base.user_root,800,คัน
+sale_order_1005707,เจ.เซอร์วิส,เจ.เซอร์วิส,เจ.เซอร์วิส,1003402,2012-11-26,product.list0,80,from stock,N/A,JXG14R,4,base.user_root,800,คัน
+sale_order_1005707,เจ.เซอร์วิส,เจ.เซอร์วิส,เจ.เซอร์วิส,1003402,2012-11-26,product.list0,70,from stock,N/A,JXG14B,6,base.user_root,800,คัน
+sale_order_1005742,ไทยฮวด,ไทยฮวด,ไทยฮวด,1003437,2012-11-27,product.list0,160,from stock,* ราคาเนต * nobox **,JXG14B,20,base.user_root,776,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,90,from stock,** ยางไทย **,JXG14P,2,base.user_root,850,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,80,from stock,** ยางไทย **,JXG14B,4,base.user_root,850,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,70,from stock,** ยางไทย **,JXG14R,4,base.user_root,850,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,170,from stock,N/A,JXG16R,8,base.user_root,855,คัน
+sale_order_1006210,"สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน","สุรพลจักรยาน, ร้าน",1003905,2013-01-05,product.list0,180,from stock,N/A,JXG16P,12,base.user_root,855,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,70,from stock,N/A,JXG16P,6,base.user_root,884,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,80,from stock,N/A,JXG16R,6,base.user_root,884,คัน
+sale_order_1006189,"วรรณา, ร้าน","วรรณา, ร้าน","วรรณา, ร้าน",1003884,2013-01-04,product.list0,90,from stock,N/A,JXG16SB,6,base.user_root,884,คัน
+sale_order_1005707,เจ.เซอร์วิส,เจ.เซอร์วิส,เจ.เซอร์วิส,1003402,2012-11-26,product.list0,60,from stock,N/A,JXG16SB,10,base.user_root,856,คัน
+sale_order_1005707,เจ.เซอร์วิส,เจ.เซอร์วิส,เจ.เซอร์วิส,1003402,2012-11-26,product.list0,50,from stock,N/A,JXG16P,20,base.user_root,856,คัน
+sale_order_1005793,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,1003488,2012-12-01,product.list0,30,from stock,"** มีตะกร้า, ยางนอก-ใน ไทย ** nobox",JXG16P,8,base.user_root,938,คัน
+sale_order_1005793,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,1003488,2012-12-01,product.list0,20,from stock,"** มีตะกร้า, ยางนอก-ใน ไทย ** nobox",JXG16R,10,base.user_root,938,คัน
+sale_order_1005793,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,ซุ่นหลี-ปราณบุรี,1003488,2012-12-01,product.list0,10,from stock,"** มีตะกร้า, ยางนอก-ใน ไทย ** nobox",JXG16SB,12,base.user_root,938,คัน
+sale_order_1006129,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003824,2012-12-26,product.list0,40,from stock,N/A,JXG16R,10,base.user_root,856,คัน
+sale_order_1006129,"สินสุนันท์, ร้าน","สินสุนันท์, ร้าน","สินสุนันท์, ร้าน",1003824,2012-12-26,product.list0,50,from stock,N/A,JXG16SB,10,base.user_root,856,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,60,from stock,** ยางไทย **,JXG16P,2,base.user_root,910,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,50,from stock,** ยางไทย **,JXG16SB,4,base.user_root,910,คัน
+sale_order_1005943,จ.จักรยาน,จ.จักรยาน,จ.จักรยาน,1003638,2012-12-13,product.list0,40,from stock,** ยางไทย **,JXG16R,4,base.user_root,910,คัน

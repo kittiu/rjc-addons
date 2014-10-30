@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="53-attach" language="groovy" pageWidth="504" pageHeight="252" orientation="Landscape" columnWidth="504" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f42e0bc1-4a3b-4b5a-a68a-283849ad53f0">
+	<property name="ireport.zoom" value="1.0245201830476078"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="withholding_list" uuid="60327f4f-d02f-4d27-b72e-2efd6612ca70">
+		<parameter name="p_c_bpartner_id" class="java.math.BigDecimal"/>
+		<parameter name="p_c_period_id" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select pay.c_bpartner_id, ivl.c_charge_id, chg.name as type, wht.c_tax_id, tax.name as rate, pr.startdate, pr.enddate, wht.dateacct, sum(wht.taxbaseamt) as bastamt, sum(wht.taxamt) as taxamt
+
+from lco_paymentwithholding wht
+join C_PaymentAllocate pal on pal.c_paymentallocate_id = wht.c_paymentallocate_id
+join c_invoiceline ivl on ivl.c_invoiceline_id = wht.c_invoiceline_id
+join c_payment pay on pal.c_payment_id = pay.c_payment_id
+-- Make sure that, only 1 billto address is chosen
+join c_period pr on pr.startdate <= wht.dateacct and pr.enddate >= wht.dateacct
+join c_tax tax on tax.c_tax_id = wht.c_tax_id
+join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+
+where pay.c_bpartner_id = $P{p_c_bpartner_id}
+pr.c_period_id = $P{p_c_period_id}
+
+and pay.docstatus in ('CO','CL')
+group by  pay.c_bpartner_id, ivl.c_charge_id, chg.name, wht.c_tax_id, tax.name,  pr.startdate, pr.enddate, wht.dateacct]]>
+		</queryString>
+		<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+		<field name="c_charge_id" class="java.math.BigDecimal"/>
+		<field name="type" class="java.lang.String"/>
+		<field name="c_tax_id" class="java.math.BigDecimal"/>
+		<field name="rate" class="java.lang.String"/>
+		<field name="startdate" class="java.sql.Timestamp"/>
+		<field name="enddate" class="java.sql.Timestamp"/>
+		<field name="dateacct" class="java.sql.Timestamp"/>
+		<field name="bastamt" class="java.math.BigDecimal"/>
+		<field name="taxamt" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="RECORD_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT psc.ad_client_id, psc.ad_org_id, 'en_US'::character varying AS ad_language, oi.c_location_id AS org_location_id, oi.taxid, 0 AS c_doctype_id, bp.c_bpartner_id,
+bp.value AS bpvalue, bp.taxid AS bptaxid, bp.naics, bp.duns, bpg.greeting AS bpgreeting, bp.name, bp.name2, psc.payto,
+bpartnerremitlocation(bp.c_bpartner_id) AS c_location_id, bp.referenceno, bp.poreference, psc.dateacct as paydate, psc.payamt,
+psc.payamt AS amtinwords, psc.documentno, psc.printcheckoption
+   FROM c_payment psc
+   JOIN c_bpartner bp ON psc.c_bpartner_id = bp.c_bpartner_id
+   LEFT JOIN c_greeting bpg ON bp.c_greeting_id = bpg.c_greeting_id
+   JOIN ad_orginfo oi ON psc.ad_org_id = oi.ad_org_id
+WHERE C_Payment_ID = $P{RECORD_ID}]]>
+	</queryString>
+	<field name="ad_client_id" class="java.math.BigDecimal"/>
+	<field name="ad_org_id" class="java.math.BigDecimal"/>
+	<field name="ad_language" class="java.lang.String"/>
+	<field name="org_location_id" class="java.math.BigDecimal"/>
+	<field name="taxid" class="java.lang.String"/>
+	<field name="c_doctype_id" class="java.lang.Integer"/>
+	<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+	<field name="bpvalue" class="java.lang.String"/>
+	<field name="bptaxid" class="java.lang.String"/>
+	<field name="naics" class="java.lang.String"/>
+	<field name="duns" class="java.lang.String"/>
+	<field name="bpgreeting" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="name2" class="java.lang.String"/>
+	<field name="payto" class="java.lang.String"/>
+	<field name="c_location_id" class="java.math.BigDecimal"/>
+	<field name="referenceno" class="java.lang.String"/>
+	<field name="poreference" class="java.lang.String"/>
+	<field name="paydate" class="java.sql.Timestamp"/>
+	<field name="payamt" class="java.math.BigDecimal"/>
+	<field name="amtinwords" class="java.math.BigDecimal"/>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="printcheckoption" class="java.lang.String"/>
+	<variable name="formatted_date" class="java.lang.String">
+		<variableExpression><![CDATA[org.ecosoft.util.Scriptlet.getDateInFormat($F{paydate},"ddMMyyyy")]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<variable name="v_scale" class="java.lang.Integer">
+		<variableExpression><![CDATA[2]]></variableExpression>
+	</variable>
+	<background>
+		<band height="252"/>
+	</background>
+	<detail>
+		<band height="252">
+			<textField>
+				<reportElement uuid="311309a0-9fda-4b90-8491-eddc376a11b4" x="343" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 0, 1 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f65a612-7dc2-4937-b3bf-1920ce965b34" x="361" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 1, 2 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ca3985eb-4928-4a78-a1cd-db40f35a64ca" x="379" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 2, 3 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="91b26c30-2a3e-4586-a23c-e2d233643a55" x="397" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 3, 4 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b9093d0d-7adf-45db-a662-0a11a4352447" x="415" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 4, 5 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e737d6b3-32a4-4028-8d4e-10d38f1e878d" x="433" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 5, 6 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d29233db-179f-4de5-8c77-2cc8ef399117" x="451" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 6, 7 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="57491c48-9556-4dcb-9087-4d247f2e8bed" x="469" y="17" width="18" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{formatted_date}.substring( 7, 8 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7f5faeaf-804d-4324-9b59-18646278b41e" x="77" y="59" width="392" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payto}==null?org.ecosoft.util.Scriptlet.getFullName($F{name}, $F{name2}):$F{payto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement uuid="948e5f6f-2009-48f2-bc66-b9f6624187b6" x="100" y="84" width="343" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[org.ecosoft.util.Scriptlet.getAmtInWords($F{payamt}.setScale($V{v_scale}).toString(),"THB")]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement uuid="768327f5-2151-4e91-97ff-ed4963c4f1d1" x="317" y="98" width="187" height="37"/>
+				<textElement>
+					<font fontName="SansSerif" size="22" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payamt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="da523a7d-6295-4481-b723-6e27baf2d1d0" x="451" y="52" width="36" height="27">
+					<printWhenExpression><![CDATA[$F{printcheckoption} == "A"]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[//]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="4fc0f420-1a4a-4e60-b707-c7b9da367366" x="47" y="28" width="150" height="15">
+					<printWhenExpression><![CDATA[$F{printcheckoption} == "A"]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["AC.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="3036fb94-4dba-475e-bb5b-4c81b944111e" x="47" y="28" width="50" height="15">
+					<printWhenExpression><![CDATA[$F{printcheckoption} == "C"]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["CO.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

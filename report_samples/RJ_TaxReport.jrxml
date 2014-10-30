@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="รายงานภาษาขาย" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.366026910730142"/>
+	<property name="ireport.x" value="281"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT row_number() over (partition by inv.ad_client_id), DateInvoiced, InvoiceReference, dt.Name as DocumentType, DocumentNo, DateAcct,
+bp.Name as BPartner, TaxBaseAmt, GrandTotal, tax.Name as TaxRate,(GrandTotal-TaxBaseAmt) as Tax, inv.Description FROM C_Invoice inv
+JOIN C_InvoiceTax itax ON inv.C_Invoice_ID = itax.C_Invoice_ID
+JOIN C_DocType dt ON dt.C_DocType_ID = inv.C_DocType_ID
+JOIN C_BPartner bp ON bp.C_Bpartner_ID = inv.C_BPartner_ID
+JOIN C_Tax tax ON tax.C_Tax_ID = itax.C_Tax_ID
+WHERE inv.AD_Client_ID = 1000000 AND itax.AD_Org_ID = 1000000
+AND inv.IsSOTrx = 'Y'
+AND inv.C_DocType_ID IN (1000002, 1000006)
+AND itax.C_Tax_ID IN (1000014,1000013)
+--AND inv.DocStatus in ('CO','CL')]]>
+	</queryString>
+	<field name="row_number" class="java.lang.Long"/>
+	<field name="dateinvoiced" class="java.sql.Timestamp"/>
+	<field name="invoicereference" class="java.lang.String"/>
+	<field name="documenttype" class="java.lang.String"/>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="dateacct" class="java.sql.Timestamp"/>
+	<field name="bpartner" class="java.lang.String"/>
+	<field name="taxbaseamt" class="java.math.BigDecimal"/>
+	<field name="tax" class="java.math.BigDecimal"/>
+	<field name="grandtotal" class="java.math.BigDecimal"/>
+	<field name="taxrate" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<variable name="taxbaseamt_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{taxbaseamt}]]></variableExpression>
+	</variable>
+	<variable name="tax_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{tax}]]></variableExpression>
+	</variable>
+	<variable name="grandtotal_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{grandtotal}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="332" y="0" width="134" height="20"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["รายงานภาษีขาย"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="146" y="0" width="60" height="24" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[สมุด ประเภทใบสำคัญ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="207" y="0" width="67" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เลขใบสำคัญ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="273" y="0" width="59" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ใบสำคัญ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="331" y="0" width="73" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ชื่อบริษัท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="466" y="0" width="61" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ฐานภาษี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="579" y="0" width="61" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ราคารวมภาษี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="644" y="0" width="40" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[อัตราภาษี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="684" y="0" width="59" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="528" y="0" width="51" height="20" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ภาษี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="0" width="16" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="16" y="0" width="53" height="24" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ใบกำกับภาษี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="79" y="0" width="51" height="24" forecolor="#000000" backcolor="#999999"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เลขใบกำกับภาษี]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="802" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-2" width="802" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="16" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{row_number}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d/M/yyyy">
+				<reportElement x="23" y="2" width="46" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="80" y="2" width="65" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{invoicereference}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="2" width="60" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{documenttype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="2" width="67" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d/M/yyyy">
+				<reportElement x="275" y="2" width="44" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dateacct}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="2" width="130" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bpartner}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="467" y="2" width="61" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="580" y="2" width="60" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{grandtotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="686" y="2" width="120" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="false">
+				<reportElement x="528" y="2" width="52" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{tax}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0" isBlankWhenNull="true">
+				<reportElement x="645" y="2" width="38" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="Times-Italic" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{taxrate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="365" y="6" width="88" height="19"/>
+				<textElement markup="none">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ยอดขายรวมทั้งสิ้น]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="458" y="6" width="69" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{taxbaseamt_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="529" y="6" width="51" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{tax_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="580" y="6" width="61" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="9" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{grandtotal_1}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="2" width="802" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="27" width="802" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

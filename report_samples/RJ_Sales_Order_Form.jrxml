@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Sales Order" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f9a2785-f874-4a6b-ae98-64a309fc758f">
+	<property name="ireport.zoom" value="1.3310000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="RECORD_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select o.docstatus, o.c_order_id, bp.c_bpartner_id, bp.name, bpl.c_location_id,
+	l.address1, l.address2, l.address3, l.address4, l.city, l.regionname, l.postal,
+	o.documentno, o.dateordered, COALESCE(o.poreference, '-') as poreference, o.datepromised, COALESCE(ubp.name, u.name) AS salesrep_name,
+	co.c_orderline_id, co.line, co.m_product_id, co.c_uom_id, co.qtyentered, co.priceentered, co.linenetamt, p.sku,
+	COALESCE(COALESCE(co.name2, p.name), c.name) || COALESCE(' - ' || co.description, '') as product_name,
+	uom.name as uom
+
+
+from c_order o
+join c_bpartner bp on o.c_bpartner_id = bp.c_bpartner_id
+left join c_bpartner_location bpl on o.bill_location_id = bpl.c_bpartner_location_id
+left join c_location l on bpl.c_location_id = l.c_location_id
+left join ad_user u on o.salesrep_id = u.ad_user_id
+left join c_bpartner ubp on u.c_bpartner_id = ubp.c_bpartner_id
+
+left join c_orderline co on o.c_order_id = co.c_order_id
+left join m_product p on co.m_product_id = p.m_product_id
+left join c_charge c on c.c_charge_id = co.c_charge_id
+left join c_uom uom on co.c_uom_id = uom.c_uom_id
+
+where o.c_order_id = $P{RECORD_ID}
+
+order by line]]>
+	</queryString>
+	<field name="docstatus" class="java.lang.String"/>
+	<field name="c_order_id" class="java.math.BigDecimal"/>
+	<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="c_location_id" class="java.math.BigDecimal"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="address3" class="java.lang.String"/>
+	<field name="address4" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="regionname" class="java.lang.String"/>
+	<field name="postal" class="java.lang.String"/>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="poreference" class="java.lang.String"/>
+	<field name="datepromised" class="java.sql.Timestamp"/>
+	<field name="salesrep_name" class="java.lang.String"/>
+	<field name="c_orderline_id" class="java.math.BigDecimal"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="m_product_id" class="java.math.BigDecimal"/>
+	<field name="c_uom_id" class="java.math.BigDecimal"/>
+	<field name="qtyentered" class="java.math.BigDecimal"/>
+	<field name="priceentered" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<field name="sku" class="java.lang.String"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="uom" class="java.lang.String"/>
+	<variable name="linenetamt_1" class="java.math.BigDecimal" resetType="Group" resetGroup="SO" calculation="Sum">
+		<variableExpression><![CDATA[$F{linenetamt}]]></variableExpression>
+	</variable>
+	<group name="SO">
+		<groupExpression><![CDATA[$F{c_order_id}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="21">
+				<line>
+					<reportElement uuid="bf051d14-02c6-45d7-88f5-a909583e1e4c" x="0" y="19" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="3.0" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="59cab232-90ea-4c3d-84b2-0d2c372b04f1" x="380" y="1" width="95" height="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[จำนวนเงินรวม:]]></text>
+				</staticText>
+				<line>
+					<reportElement uuid="d18e7b8b-ac0d-4e16-b456-f47abefaaded" x="0" y="0" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="3.0" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<textField pattern="#,##0.00">
+					<reportElement uuid="61bee35e-1bb9-48c8-b035-5906ac0bd349" x="475" y="0" width="80" height="20"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{linenetamt_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="126" splitType="Stretch">
+			<frame>
+				<reportElement uuid="6b9ded8a-f91e-4794-bbfa-404ea9071b82" x="319" y="44" width="221" height="76"/>
+				<staticText>
+					<reportElement uuid="2b26525e-7dc6-4c41-aff7-d9d0eb2ae751" x="0" y="30" width="71" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เลขที่อ้างอิง:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="4c107cfc-a880-450a-ae7e-ec307609a163" x="0" y="15" width="71" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[วันที่:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="6d1785f5-d064-4f62-8d43-2d5fafbb7329" x="0" y="0" width="71" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เลขที่เอกสาร:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a84ece9a-22af-44ad-a608-ab316099ef56" x="0" y="60" width="71" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[วันส่งสินค้า:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="721e4780-3ba3-4407-88d6-291a639c8de2" x="0" y="45" width="71" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[พนักงานขาย:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="9cab1707-b553-4b34-9da6-f7c95974275d" x="71" y="0" width="150" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement uuid="120275bb-8e75-469f-b898-4b16ccc56381" x="71" y="15" width="150" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dateordered}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement uuid="0ce8bc31-7b9c-4dd7-b3c4-dc5ccc6f5beb" x="71" y="60" width="150" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{datepromised}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement uuid="de97ed20-7204-437c-8d6a-e149a109fcb7" x="194" y="0" width="167" height="44"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ใบสั่งขาย
+Sales Order
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a8de9c3-5c0c-4423-acd8-97c742681277" x="0" y="0" width="194" height="44"/>
+				<textElement markup="none">
+					<font fontName="SansSerif" size="10" isBold="true" isUnderline="false" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[417 หมู่ 2 ถนน บางพลี-ตำหรุ
+ตำบล แพรกษาใหม่ อำเภอเมือง
+จังหวัด สมุทรปราการ, 10280 ประเทศไทย]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="b07d3d43-1810-43ce-a6fc-707ea16d289e" x="15" y="44" width="292" height="75"/>
+				<staticText>
+					<reportElement uuid="91312687-ee5c-485a-811d-7d9b9c7b20bb" x="0" y="0" width="53" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ชื่อลูกค้า:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8ba921c0-bf0d-41a6-830b-c6122e4106bc" x="0" y="15" width="53" height="30"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ที่อยู่ลูกค้า:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="19d60f55-0fb5-4c8e-b03f-566ae5cd4bd0" x="53" y="15" width="239" height="60"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{address1},$F{address2},$F{address3},$F{address4},$F{city},$F{regionname},$F{postal})]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="e87b4a2c-7e0f-4b77-b037-05166dfc03a4" x="53" y="0" width="239" height="15"/>
+					<textElement>
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField>
+				<reportElement uuid="9a9671a2-a6f4-454e-bb35-ad6ac6b79256" x="390" y="74" width="150" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{poreference}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2f963c9f-835d-4b1c-826d-1e9420214fb6" x="390" y="89" width="150" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salesrep_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="88460611-09c1-47b2-9b72-65c490255e8d" stretchType="RelativeToBandHeight" x="0" y="125" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image isUsingCache="true">
+				<reportElement uuid="4ad29ffe-e0a0-4eb8-b3e4-c5e8fd32b7ef" x="509" y="0" width="44" height="44"/>
+				<imageExpression><![CDATA["raja_logo.gif"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="471b0958-c35c-46a2-be44-c7d51b0b8e50" x="361" y="0" width="151" height="39" forecolor="#FF0000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{docstatus} == "VO" ? "VOIDED" : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="97013be8-651a-4585-9f11-a7a5bdbaaf21" x="0" y="3" width="27" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e6ef4c77-7ce4-42a4-9fca-b768deeedbf5" x="27" y="3" width="77" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รหัสสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="803f08d6-6074-45cc-a772-606fa1fbf33b" x="361" y="3" width="34" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หน่วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5dc66337-e263-4bb3-acf7-2c154f5ac75f" x="319" y="3" width="42" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[จำนวน]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="2d6a533f-eb0e-4f48-b185-30f49e4e496b" x="0" y="26" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="9c1f7673-0d05-49df-99e2-8071e1d3e15d" x="465" y="4" width="90" height="19"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงิน (บาท)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c98ccca-2702-4865-8f2e-d64b07979d1d" x="395" y="4" width="70" height="19"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หน่วยละ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b901c326-a3de-4c0a-8bc7-6efa8f3a6f37" x="104" y="3" width="215" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ชื่อสินค้า]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24">
+			<textField>
+				<reportElement uuid="75f045c9-db42-48ad-8fa0-842cf0424f59" x="0" y="3" width="27" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="b474d6b8-7066-4d80-8511-4aeed0a44778" x="0" y="0" width="555" height="1"/>
+			</line>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement uuid="817ac996-b750-47b8-a206-a1cdbd928e48" x="319" y="3" width="42" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtyentered}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="100be477-df88-41a0-b3d6-c33442e927ac" x="104" y="3" width="215" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f0f87272-9f4b-4bc3-8d13-9a86620d05ab" x="27" y="3" width="77" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sku}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement uuid="0e953496-fcc8-4d33-92e3-8be7e8475d52" x="361" y="3" width="34" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement uuid="5265ca56-cd45-4cee-8d60-3bd5ca9061af" x="395" y="3" width="70" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{priceentered}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement uuid="edaf0f5e-c747-4ea7-b092-2c5b2a6b18a3" x="465" y="3" width="90" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{linenetamt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

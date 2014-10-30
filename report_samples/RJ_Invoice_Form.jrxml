@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice Form" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.layers" value="##Fri Aug 06 11:09:44 ICT 2010\nlayer.1.name=Invoice BG\nlayer.1.visible=true\nlayer.1.id=1\nlayer.0.name=Background\nlayer.0.visible=true\nlayer.0.id=0"/>
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="123"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.background.image" value="C:\Users\NUI\Desktop\invoice_bg.jpg"/>
+	<property name="ireport.background.image.properties" value="true,true,0.25,-8,-8,0,0,611,857"/>
+	<parameter name="RECORD_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select inv.docstatus, inv.c_invoice_id, inv.documentno as invdocno, inv.description, inv.c_bpartner_id, bp.name as cust_name, inv.dateinvoiced,
+	-- Invoice Address
+	l.address1, l.address2, l.address3, l.address4, l.city, l.regionname, l.postal,
+
+	-- Invoice Lines
+	ivl.line,
+	-- Case 1, Charge
+	CASE WHEN c.name is not null THEN coalesce(c.name || ', ' || ivl.description, c.name)
+	-- Case 2, Product Name 2 form Order
+            WHEN ol.name2 is not null THEN coalesce(p.value || ' - ' || ol.name2 || ', ' || ivl.description, p.value || ' - ' || ol.name2)
+        -- Case 3, Product Name 2 from Product
+            WHEN p.name2 is not null THEN coalesce(p.value || ' - ' || p.name2 || ', ' || ivl.description, p.value || ' - ' || p.name2)
+        -- Case 4, Product Name from Product
+            ELSE coalesce(p.value || ' - ' || p.name || ', ' || ivl.description, p.value || ' - ' || p.name)
+	END as product_name,
+
+	ivl.qtyentered, uom.name as uom, ivl.priceentered, ivl.linenetamt, inv.grandtotal, o.documentno as orderdocno, o.dateordered,
+	-- Controlling whether it will be displayed. 1) If not, check if in Sales Line is <> "Orignial" then print 2) If Invoice Line is <> "Orignial" then print 3) If IsPrinted=true, always print
+	CASE WHEN COALESCE(ivl.isprinted,'N')='Y' THEN true
+		WHEN COALESCE(ivl.KitItemStatus,'') <> 'O'
+			AND COALESCE(ol.KitItemStatus,'') <> 'O' THEN true
+            ELSE false
+       END as IsPrinted
+       ,ivl.isprinted,ivl.KitItemStatus,ol.KitItemStatus
+
+from c_invoice inv
+
+   left join c_bpartner bp on inv.c_bpartner_id = bp.c_bpartner_id
+   left join c_bpartner_location bpl ON inv.c_bpartner_location_id = bpl.c_bpartner_location_id
+   left join c_location l ON bpl.c_location_id = l.c_location_id
+   left join c_order o ON o.c_order_id = inv.c_order_id
+
+-- Invoice Lines
+   left join c_invoiceline ivl on ivl.c_invoice_id = inv.c_invoice_id
+   left join m_product p on ivl.m_product_id = p.m_product_id
+   left join c_charge c on ivl.c_charge_id = c.c_charge_id
+   left join c_uom uom on ivl.c_uom_id = uom.c_uom_id
+
+-- Refer to Sales Order Liens
+   left join c_orderline ol on ol.c_orderline_id = ivl.c_orderline_id
+
+where inv.c_invoice_id = $P{RECORD_ID}
+and not (c.c_charge_id is null and p.m_product_id is null)
+order by ivl.line]]>
+	</queryString>
+	<field name="docstatus" class="java.lang.String"/>
+	<field name="c_invoice_id" class="java.math.BigDecimal"/>
+	<field name="invdocno" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+	<field name="cust_name" class="java.lang.String"/>
+	<field name="dateinvoiced" class="java.sql.Timestamp"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="address3" class="java.lang.String"/>
+	<field name="address4" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="regionname" class="java.lang.String"/>
+	<field name="postal" class="java.lang.String"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="qtyentered" class="java.math.BigDecimal"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="priceentered" class="java.math.BigDecimal"/>
+	<field name="linenetamt" class="java.math.BigDecimal"/>
+	<field name="grandtotal" class="java.math.BigDecimal"/>
+	<field name="orderdocno" class="java.lang.String"/>
+	<field name="dateordered" class="java.sql.Timestamp"/>
+	<field name="isprinted" class="java.lang.Boolean"/>
+	<variable name="v_scale" class="java.lang.Integer">
+		<variableExpression><![CDATA[2]]></variableExpression>
+	</variable>
+	<variable name="linenetamt_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{linenetamt}]]></variableExpression>
+	</variable>
+	<filterExpression><![CDATA[$F{isprinted}.equals(true)]]></filterExpression>
+	<pageHeader>
+		<band height="179" splitType="Stretch">
+			<textField>
+				<reportElement x="82" y="97" width="233" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cust_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="121" width="233" height="43"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{address1},$F{address2},$F{address3},$F{address4},$F{city},$F{regionname},$F{postal})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="394" y="97" width="151" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="404" y="0" width="151" height="39" forecolor="#FF0000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="20" isBold="true" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{docstatus} == "VO" ? "VOIDED" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="164" width="192" height="15"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{invdocno}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="394" y="121" width="151" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{orderdocno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="394" y="141" width="151" height="18"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dateordered}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="0" width="28" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{line}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="41" y="0" width="279" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{product_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="0" width="38" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="403" y="0" width="56" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{priceentered}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="45" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtyentered}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="459" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{linenetamt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="170">
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="459" y="6" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{linenetamt_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="200">
+			<textField pattern="#,##0.00;(#,##0.00)" isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="424" y="58" width="115" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{grandtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="32" width="345" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["("+org.ecosoft.util.Scriptlet.getAmtInWords($F{grandtotal}.setScale($V{v_scale}).toString(),"THB")+")"]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="459" y="32" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{linenetamt_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="41" y="0" width="368" height="31"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

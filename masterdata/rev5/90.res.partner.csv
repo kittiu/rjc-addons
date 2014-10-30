@@ -1,0 +1,2 @@
+id,name,ref,is_company,customer,supplier,parent_id,type,street,street2,zip,city,country_id/id,phone,mobile,fax,email,category_id/id,website,comment
+res_partner_XXX21,"สุวรรณภูมิจักรยาน, ร้าน",XXX21,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,

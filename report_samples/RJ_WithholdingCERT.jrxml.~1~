@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RJ_WithholdingCERT" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.331000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="TYPE_2">
+		<parameter name="p_c_payment_id" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select pwh.lco_paymentwithholding_id, chg.name as charge, wcg.typeofincome,
+pwh.datetrx, pwh.taxbaseamt, pwh.taxamt from c_payment pay
+join c_paymentallocate pal on pal.c_payment_id = pay.c_payment_id
+join lco_paymentwithholding pwh on pal.c_paymentallocate_id = pwh.c_paymentallocate_id
+left join c_invoiceline ivl on ivl.c_invoiceline_id =  pwh.c_invoiceline_id
+left join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+left join LCO_WithholdingCategory wcg on wcg.LCO_WithholdingCategory_ID = chg.LCO_WithholdingCategory_ID
+where pay.c_payment_id = $P{p_c_payment_id} and wcg.typeofincome='TYPE_2']]>
+		</queryString>
+		<field name="lco_paymentwithholding_id" class="java.math.BigDecimal"/>
+		<field name="charge" class="java.lang.String"/>
+		<field name="typeofincome" class="java.lang.String"/>
+		<field name="datetrx" class="java.sql.Timestamp"/>
+		<field name="taxbaseamt" class="java.math.BigDecimal"/>
+		<field name="taxamt" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="TYPE_4A">
+		<parameter name="p_c_payment_id" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select pwh.lco_paymentwithholding_id, chg.name as charge, wcg.typeofincome,
+pwh.datetrx, pwh.taxbaseamt, pwh.taxamt from c_payment pay
+join c_paymentallocate pal on pal.c_payment_id = pay.c_payment_id
+join lco_paymentwithholding pwh on pal.c_paymentallocate_id = pwh.c_paymentallocate_id
+left join c_invoiceline ivl on ivl.c_invoiceline_id =  pwh.c_invoiceline_id
+left join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+left join LCO_WithholdingCategory wcg on wcg.LCO_WithholdingCategory_ID = chg.LCO_WithholdingCategory_ID
+where pay.c_payment_id = $P{p_c_payment_id} and wcg.typeofincome='TYPE_4A']]>
+		</queryString>
+		<field name="lco_paymentwithholding_id" class="java.math.BigDecimal"/>
+		<field name="charge" class="java.lang.String"/>
+		<field name="typeofincome" class="java.lang.String"/>
+		<field name="datetrx" class="java.sql.Timestamp"/>
+		<field name="taxbaseamt" class="java.math.BigDecimal"/>
+		<field name="taxamt" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="TYPE_5">
+		<parameter name="p_c_payment_id" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select pwh.lco_paymentwithholding_id, chg.name as charge, wcg.typeofincome,
+pwh.datetrx, pwh.taxbaseamt, pwh.taxamt from c_payment pay
+join c_paymentallocate pal on pal.c_payment_id = pay.c_payment_id
+join lco_paymentwithholding pwh on pal.c_paymentallocate_id = pwh.c_paymentallocate_id
+left join c_invoiceline ivl on ivl.c_invoiceline_id =  pwh.c_invoiceline_id
+left join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+left join LCO_WithholdingCategory wcg on wcg.LCO_WithholdingCategory_ID = chg.LCO_WithholdingCategory_ID
+where pay.c_payment_id = $P{p_c_payment_id} and wcg.typeofincome='TYPE_5']]>
+		</queryString>
+		<field name="lco_paymentwithholding_id" class="java.math.BigDecimal"/>
+		<field name="charge" class="java.lang.String"/>
+		<field name="typeofincome" class="java.lang.String"/>
+		<field name="datetrx" class="java.sql.Timestamp"/>
+		<field name="taxbaseamt" class="java.math.BigDecimal"/>
+		<field name="taxamt" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="Total Withholding">
+		<parameter name="p_c_payment_id" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select sum(pwh.taxbaseamt) as taxbaseamt, sum(pwh.taxamt) as taxamt from c_payment pay
+join c_paymentallocate pal on pal.c_payment_id = pay.c_payment_id
+join lco_paymentwithholding pwh on pal.c_paymentallocate_id = pwh.c_paymentallocate_id
+left join c_invoiceline ivl on ivl.c_invoiceline_id =  pwh.c_invoiceline_id
+left join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+left join LCO_WithholdingCategory wcg on wcg.LCO_WithholdingCategory_ID = chg.LCO_WithholdingCategory_ID
+where pay.c_payment_id = $P{p_c_payment_id}]]>
+		</queryString>
+		<field name="taxbaseamt" class="java.math.BigDecimal"/>
+		<field name="taxamt" class="java.math.BigDecimal"/>
+		<variable name="v_scale" class="java.lang.Integer">
+			<variableExpression><![CDATA[2]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="RECORD_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[-- Organization Information
+select
+-- org
+pay.c_payment_id, org.description as orgname, orginfo.taxid as org_taxid,
+orgloc.address1 as org_address1, orgloc.address2 as org_address2, orgloc.address3 as org_address3, orgloc.address4 as org_address4, orgloc.city as org_city, orgloc.regionname as org_regionname, orgloc.postal as org_postal
+-- bparnter
+,pal.c_paymentallocate_id, bp.name as bp_name1, bp.name2 as bp_name2,
+(CASE WHEN taxpaytype.name in ('คณะบุคคล', 'บริษัทจำกัด', 'ห้างหุ้นส่วน') THEN bp.taxid ELSE null END) as bp_taxid,
+(CASE WHEN taxpaytype.name='บุคคลธรรมดา' THEN bp.taxid ELSE null END) as bp_cid,
+bploc.address1 as bp_address1, bploc.address2 as bp_address2, bploc.address3 as bp_address3, bploc.address4 as bp_address4, bploc.city as bp_city, bploc.regionname as bp_regionname, bploc.postal as bp_postal
+from c_payment pay
+-- info for Org
+join ad_org org on org.ad_org_id = pay.ad_org_id
+join ad_orginfo orginfo on org.ad_org_id = orginfo.ad_org_id
+join c_location orgloc on orgloc.c_location_id = orginfo.c_location_id
+-- Info for BPartner
+join c_paymentallocate pal on pay.c_payment_id = pal.c_payment_id
+join c_invoice inv on inv.c_invoice_id = pal.c_invoice_id
+left join c_bpartner bp on bp.c_bpartner_id = inv.c_bpartner_id
+left join c_bpartner_location bpil ON inv.c_bpartner_location_id = bpil.c_bpartner_location_id
+left join c_location bploc ON bpil.c_location_id = bploc.c_location_id
+left join lco_taxpayertype taxpaytype on taxpaytype.lco_taxpayertype_id = bp.lco_taxpayertype_id
+Where pay.c_payment_id = (select c_payment_id from LCO_PaymentWithholding pwh
+join c_paymentallocate pal on pal.c_paymentallocate_id = pwh.c_paymentallocate_id
+where LCO_PaymentWithholding_ID=$P{RECORD_ID})
+limit 1]]>
+	</queryString>
+	<field name="c_payment_id" class="java.math.BigDecimal"/>
+	<field name="orgname" class="java.lang.String"/>
+	<field name="org_taxid" class="java.lang.String"/>
+	<field name="org_address1" class="java.lang.String"/>
+	<field name="org_address2" class="java.lang.String"/>
+	<field name="org_address3" class="java.lang.String"/>
+	<field name="org_address4" class="java.lang.String"/>
+	<field name="org_city" class="java.lang.String"/>
+	<field name="org_regionname" class="java.lang.String"/>
+	<field name="org_postal" class="java.lang.String"/>
+	<field name="c_paymentallocate_id" class="java.math.BigDecimal"/>
+	<field name="bp_name1" class="java.lang.String"/>
+	<field name="bp_name2" class="java.lang.String"/>
+	<field name="bp_taxid" class="java.lang.String"/>
+	<field name="bp_cid" class="java.lang.String"/>
+	<field name="bp_address1" class="java.lang.String"/>
+	<field name="bp_address2" class="java.lang.String"/>
+	<field name="bp_address3" class="java.lang.String"/>
+	<field name="bp_address4" class="java.lang.String"/>
+	<field name="bp_city" class="java.lang.String"/>
+	<field name="bp_regionname" class="java.lang.String"/>
+	<field name="bp_postal" class="java.lang.String"/>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement x="0" y="0" width="555" height="802"/>
+				<imageExpression class="java.lang.String"><![CDATA["WithholdingCert.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<textField>
+				<reportElement x="431" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 3, 4 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 2, 3 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 9, 10 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 4, 5 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 6, 7 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 7, 8 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="409" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 1, 2 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 0, 1 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 5, 6 ):""]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="56" y="107" width="465" height="22"/>
+				<textElement verticalAlignment="Bottom" lineSpacing="1_1_2">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{org_address1},$F{org_address2},$F{org_address3},$F{org_address4},$F{org_city},$F{org_regionname},$F{org_postal})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="86" width="241" height="20"/>
+				<textElement verticalAlignment="Bottom" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{orgname}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="52" y="157" width="326" height="20"/>
+				<textElement verticalAlignment="Bottom" lineSpacing="1_1_2">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_name1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="57" y="182" width="458" height="20"/>
+				<textElement verticalAlignment="Bottom" lineSpacing="1_1_2">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{bp_address1},$F{bp_address2},$F{bp_address3},$F{bp_address4},$F{bp_city},$F{bp_regionname},$F{bp_postal})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="379" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 2, 3 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="460" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 5, 6 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="471" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 6, 7 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="441" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 7, 8 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="444" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 4, 5 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="494" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 8, 9 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="410" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 1, 2 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="419" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 6, 7 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 3, 4 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="368" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 1, 2 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="453" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 8, 9 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="350" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 0, 1 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="433" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 3, 4 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="402" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 4, 5 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="422" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 2, 3 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="392" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 0, 1 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="481" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 10, 11 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="464" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 9, 10 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="510" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 12, 13 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="510" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 9, 10 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="483" y="163" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 7, 8 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="493" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 11, 12 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="92" width="10" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{org_taxid}.length()==10?$F{org_taxid}.substring( 8, 9 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="430" y="145" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 5, 6 ):""]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement mode="Transparent" x="316" y="301" width="175" height="28"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TYPE_2">
+						<datasetParameter name="p_c_payment_id">
+							<datasetParameterExpression><![CDATA[$F{c_payment_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="65">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="dd/MM/yyyy">
+								<reportElement x="0" y="0" width="65" height="14"/>
+								<textElement textAlignment="Center" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{datetrx}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="76" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="71">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="66" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement mode="Transparent" x="316" y="329" width="175" height="28"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TYPE_4A">
+						<datasetParameter name="p_c_payment_id">
+							<datasetParameterExpression><![CDATA[$F{c_payment_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="65">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="dd/MM/yyyy">
+								<reportElement x="0" y="0" width="65" height="14"/>
+								<textElement textAlignment="Center" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{datetrx}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="76" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="71">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="66" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement mode="Transparent" x="170" y="568" width="254" height="28"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TYPE_5">
+						<datasetParameter name="p_c_payment_id">
+							<datasetParameterExpression><![CDATA[$F{c_payment_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="145">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="145" height="14"/>
+								<textElement lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{charge}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="65">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="dd/MM/yyyy">
+								<reportElement x="0" y="0" width="65" height="14"/>
+								<textElement textAlignment="Center" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{datetrx}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="76" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="71">
+						<jr:detailCell height="14" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="66" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement mode="Transparent" x="381" y="644" width="135" height="26"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Total Withholding">
+						<datasetParameter name="p_c_payment_id">
+							<datasetParameterExpression><![CDATA[$F{c_payment_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="76">
+						<jr:detailCell height="30" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="76" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="71">
+						<jr:detailCell height="30" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement x="0" y="0" width="66" height="14"/>
+								<textElement textAlignment="Right" lineSpacing="Single">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{taxamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table" mode="Transparent" x="170" y="670" width="345" height="25"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Total Withholding">
+						<datasetParameter name="p_c_payment_id">
+							<datasetParameterExpression><![CDATA[$F{c_payment_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="430">
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="430" height="20"/>
+								<textElement lineSpacing="Single">
+									<font fontName="SansSerif" size="12" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression class="java.lang.String"><![CDATA["("+org.ecosoft.util.Scriptlet.getAmtInWords($F{taxamt}.setScale($V{v_scale}).toString(),"THB")+")"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

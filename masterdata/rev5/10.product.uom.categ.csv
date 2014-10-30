@@ -1,0 +1,7 @@
+id,name
+product.uom_categ_blank,Blank/Weight (RJC)
+product.uom_categ_length,Length / Distance (RJC)
+product.uom_categ_unit,Unit (RJC)
+product.uom_categ_volume,Volume (RJC)
+product.uom_categ_kgm,Weight (RJC)
+product.uom_categ_wtime,Time (RJC)

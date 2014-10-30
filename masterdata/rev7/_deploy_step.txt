@@ -1,0 +1,23 @@
+Step:
+1. Create shippers --> 10.partner.shipper.csv
+2. Update shippers for Partners --> 20.update.partner.shipper.csv
+3. SQL to change from old delivery address to customer address.
+
+<pre>
+-- SO
+update sale_order set partner_shipping_id = partner_id where partner_shipping_id in (select id from res_partner where name like '%กรุงเทพ%ขนส่ง%');
+-- DO
+update stock_picking set partner_id = (select parent_id from res_partner where id = partner_id) 
+where partner_id in (select id from res_partner where name like '%กรุงเทพ%ขนส่ง%');
+-- Invoice
+update account_invoice set partner_invoice_id = partner_id where partner_invoice_id is null;
+-- Accounting Move
+update account_move_line set partner_id = (select parent_id from res_partner where id = partner_id) 
+where partner_id in (select id from res_partner where name like '%กรุงเทพ%ขนส่ง%');
+-- If shipper of a customer is available, assign that shipper in all SO/DO/INV
+update sale_order set shipper_id = (select partner_shipper_id from partner_shipper_res_partner_rel where sale_order.partner_id = res_partner_id);
+update account_invoice set shipper_id = (select partner_shipper_id from partner_shipper_res_partner_rel where account_invoice.partner_id = res_partner_id);
+update stock_picking set shipper_id = (select partner_shipper_id from partner_shipper_res_partner_rel where stock_picking.partner_id = res_partner_id);
+</pre>
+
+4. Manually delete all customer = 'กรุงเทพ%ขนส่ง'

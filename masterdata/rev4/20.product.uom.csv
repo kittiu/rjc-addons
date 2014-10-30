@@ -1,0 +1,91 @@
+id	name	category_id/id	uom_type	rounding	factor_inv	factor
+product.uom_day	วัน	product.uom_categ_wtime	Reference Unit of Measure for this category	0.01	1	1
+product.uom_hour	ชั่วโมง	product.uom_categ_wtime	Smaller than the reference Unit of Measure	0.01	0.125	8
+product.uom_กรัม	กรัม	product.uom_categ_kgm	Smaller than the reference Unit of Measure	0.01	0.001	1000
+product.uom_กก	กก.	product.uom_categ_kgm	Reference Unit of Measure for this category	0.01	1	1
+product.uom_ตัน	ตัน	product.uom_categ_kgm	Bigger than the reference Unit of Measure	0.01	1000	0.001
+product.uom_ลูกบาศก์เมตร	ลูกบาศก์เมตร	product.uom_categ_volume	Reference Unit of Measure for this category	0.01	1	1
+product.uom_ลูกบาศก์เซ็นติเมตร	ลูกบาศก์เซ็นติเมตร	product.uom_categ_volume	Smaller than the reference Unit of Measure	0.01	0.000001	1000000
+product.uom_กระป๋อง	กระป๋อง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_กล่อง	กล่อง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ก้อน	ก้อน	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_กุรุส	กุรุส	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ขวด	ขวด	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_คัน	คัน	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_คู่	คู่	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ชุด	ชุด	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ซี่	ซี่	product.uom_categ_unit	Bigger than the reference Unit of Measure	0.001	12	0.0833
+product.uom_ดวง	ดวง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ดอก	ดอก	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ตัว	ตัว	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ถัง	ถัง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ถุง	ถุง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ท่อ	ท่อ	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ใบ	ใบ	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ปี๊บ	ปี๊บ	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ผืน	ผืน	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_แผ่น	แผ่น	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_พวง	พวง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_แพค	แพค	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ม้วน	ม้วน	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_เม็ด	เม็ด	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ลัง	ลัง	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ลูก	ลูก	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_เล่ม	เล่ม	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_เส้น	เส้น	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_หลอด	หลอด	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_ห่อ	ห่อ	product.uom_categ_unit	Smaller than the reference Unit of Measure	1	1	1
+product.uom_โหล	โหล	product.uom_categ_unit	Bigger than the reference Unit of Measure	0.001	144	0.00694
+product.uom_อัน	อัน	product.uom_categ_unit	Reference Unit of Measure for this category	1	1	1
+product.uom_เมตร	เมตร	product.uom_categ_length	Reference Unit of Measure for this category	0.01	1	1
+product.uom_เซ็นติเมตร	เซ็นติเมตร	product.uom_categ_length	Smaller than the reference Unit of Measure	0.01	0.01	100
+product.uom_กก_bnk	กก. (BNK)	product.uom_categ_blank	Reference UoM for this category	0.001	1	1
+product.uom_อัน_BNK001	อัน (BNK001)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0689655	14.500003625
+product.uom_อัน_BNK002	อัน (BNK002)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.1162791	8.599997764
+product.uom_อัน_BNK003	อัน (BNK003)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0454545	22.000022
+product.uom_อัน_BNK004	อัน (BNK004)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.2	5
+product.uom_อัน_BNK005	อัน (BNK005)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0724638	13.799993928
+product.uom_อัน_BNK006	อัน (BNK006)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0151515	66.0000660001
+product.uom_อัน_BNK008	อัน (BNK008)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0694444	14.400009216
+product.uom_อัน_BNK009	อัน (BNK009)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0333333	30.00003
+product.uom_อัน_BNK010	อัน (BNK010)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.1785714	5.600000896
+product.uom_อัน_BNK011	อัน (BNK011)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.2325581	4.300000731
+product.uom_อัน_BNK012	อัน (BNK012)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.125	8
+product.uom_อัน_BNK013	อัน (BNK013)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0588235	17.0000085
+product.uom_อัน_BNK014	อัน (BNK014)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0277778	35.9999712
+product.uom_อัน_BNK015	อัน (BNK015)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0069444	144.0009216059
+product.uom_อัน_BNK016	อัน (BNK016)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0862069	11.599999536
+product.uom_อัน_BNK019	อัน (BNK019)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0714286	13.9999944
+product.uom_อัน_BNK021	อัน (BNK021)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0344828	28.9999652
+product.uom_อัน_BNK023	อัน (BNK023)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.025	40
+product.uom_อัน_BNK024	อัน (BNK024)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0016667	599.98800024
+product.uom_อัน_BNK025	อัน (BNK025)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0487805	20.499994875
+product.uom_อัน_BNK026	อัน (BNK026)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.018018	55.5000555001
+product.uom_อัน_BNK027	อัน (BNK027)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.047619	21.000021
+product.uom_อัน_BNK028	อัน (BNK028)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0909091	10.9999989
+product.uom_อัน_BNK029	อัน (BNK029)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0280112	35.700005712
+product.uom_อัน_BNK031	อัน (BNK031)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.1492537	6.700001407
+product.uom_อัน_BNK032	อัน (BNK032)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0333333	30.00003
+product.uom_อัน_BNK033	อัน (BNK033)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0322581	30.9999659
+product.uom_อัน_BNK035	อัน (BNK035)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.1111111	9.0000009
+product.uom_อัน_BNK036	อัน (BNK036)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0322581	30.9999659
+product.uom_อัน_BNK037	อัน (BNK037)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0333333	30.00003
+product.uom_อัน_BNK038	อัน (BNK038)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0392157	25.499991075
+product.uom_อัน_BNK039	อัน (BNK039)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0460829	21.700023219
+product.uom_อัน_BNK042	อัน (BNK042)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0909091	10.9999989
+product.uom_อัน_BNK043	อัน (BNK043)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0289855	34.500008625
+product.uom_อัน_BNK044	อัน (BNK044)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0392157	25.499991075
+product.uom_อัน_BNK045	อัน (BNK045)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0208333	48.0000768001
+product.uom_อัน_BNK052	อัน (BNK052)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0666667	14.9999925
+product.uom_อัน_BNK053	อัน (BNK053)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0454545	22.000022
+product.uom_อัน_BNK054	อัน (BNK054)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0555556	17.9999856
+product.uom_อัน_BNK055	อัน (BNK055)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.047619	21.000021
+product.uom_อัน_BNK056	อัน (BNK056)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0384615	26.000026
+product.uom_อัน_BNK057	อัน (BNK057)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0128205	78.0000780001
+product.uom_อัน_BNK059	อัน (BNK059)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0740741	13.499995275
+product.uom_อัน_BNK060	อัน (BNK060)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.1754386	5.699999886
+product.uom_อัน_BNK061	อัน (BNK061)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.1492537	6.700001407
+product.uom_อัน_BNK062	อัน (BNK062)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0769231	12.9999961
+product.uom_อัน_BNK063	อัน (BNK063)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0970874	10.299997734
+product.uom_อัน_BNK064	อัน (BNK064)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0606061	16.499989275
+product.uom_อัน_BNK065	อัน (BNK065)	product.uom_categ_blank	Smaller than the reference UoM	0.001	0.0294985	33.900028815

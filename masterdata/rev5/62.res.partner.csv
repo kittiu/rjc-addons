@@ -1,0 +1,7 @@
+id,name,ref,is_company,customer,supplier,parent_id,type,street,street2,zip,city,country_id/id,phone,mobile,fax,email,category_id/id,website,comment
+base.res_partner_1184,"เจ แอนด์ พี, ร้าน",J023,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,
+base.res_partner_1185,"หงษ์ทองอะไหล่, ร้าน",H014,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,
+base.res_partner_1186,"จักรยานร่มเกล้า (เฮียเอ๋), ร้าน",J024,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,
+base.res_partner_1187,"รุ่งโรจน์ จักรยาน, ร้าน",R024,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,
+base.res_partner_1188,"จักรยานเจ้าคุณทหาร (เฮียเอ๋), ร้าน",J025,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,
+base.res_partner_1189,SDL OUTLET LIMITED PARTNERSHIP,S122,TRUE,TRUE,FALSE,,Default,,,,กรุงเทพ,base.th,,,,,base.res_partner_category_wholesaler,,

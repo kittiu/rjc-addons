@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Receipt" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="19"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table" lineSpacing="Single">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF" lineSpacing="Single">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF" lineSpacing="Single">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF" lineSpacing="Single">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[select pay.c_payment_id, pay.c_bpartner_id, bp.c_bpartner_id, bp.name as cust_name,
+	-- Invoice Address
+	l.address1, l.address2, l.address3, l.address4, l.city, l.regionname, l.postal,
+	-- Allocation line
+	pay.documentno as pay_docno, pay.datetrx, inv.documentno as inv_docno,
+	dateinvoiced, (pal.amount + pal.discountamt + pal.writeoffamt + pal.overunderamt) as amount, pal.discountamt, pal.amount as payamt, pay.discountamt as totdiscountamt, pay.payamt as totpayamt,
+	-- ชำระโดย
+	coalesce(tendertype.name,'-') || '# ' || coalesce(pay.checkno,'') || coalesce(pay.accountno,'') || ' Amount ' || to_char(coalesce(pay.payamt,0),'999G999G999D99') || ' Baht ' ||
+	to_char(pay.chkdepositdate,'DD/MM/YYYY') || coalesce(' ' || pay.bankname,'') || ' ' || pay.branchname as paid_by
+
+from c_payment pay
+left join c_bpartner bp on pay.c_bpartner_id = bp.c_bpartner_id
+-- Joins to get invoice address
+   left join c_bpartner_location bpil ON bp.c_bpartner_id = bpil.c_bpartner_id AND bpil.isbillto = 'Y' and bpil.isactive = 'Y'
+   left join c_location l ON bpil.c_location_id = l.c_location_id
+   left join c_country_trl ct on l.c_country_id = ct.c_country_id and substr(ct.ad_language, 1, 2) = 'th'
+   left join c_country c on l.c_country_id = c.c_country_id
+-- Allocation Lines
+   left join c_allocationline pal on pal.c_payment_id = pay.c_payment_id
+   left join c_invoice inv on inv.c_invoice_id = pal.c_invoice_id
+   left join c_order o on o.c_order_id = inv.c_order_id
+-- Misc
+   left join ad_ref_list tendertype on pay.tendertype = tendertype.value and ad_reference_id = 214 -- Payment's Tender Type
+
+where pay.c_payment_id = $P{RECORD_ID}]]>
+	</queryString>
+	<field name="c_payment_id" class="java.math.BigDecimal"/>
+	<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+	<field name="cust_name" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="address3" class="java.lang.String"/>
+	<field name="address4" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="regionname" class="java.lang.String"/>
+	<field name="postal" class="java.lang.String"/>
+	<field name="pay_docno" class="java.lang.String"/>
+	<field name="datetrx" class="java.sql.Timestamp"/>
+	<field name="inv_docno" class="java.lang.String"/>
+	<field name="dateinvoiced" class="java.sql.Timestamp"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<field name="discountamt" class="java.math.BigDecimal"/>
+	<field name="payamt" class="java.math.BigDecimal"/>
+	<field name="totdiscountamt" class="java.math.BigDecimal"/>
+	<field name="totpayamt" class="java.math.BigDecimal"/>
+	<field name="paid_by" class="java.lang.String"/>
+	<variable name="v_scale" class="java.lang.Integer">
+		<variableExpression><![CDATA[2]]></variableExpression>
+	</variable>
+	<variable name="amount_1" class="java.math.BigDecimal" resetType="Group" resetGroup="Allocations" calculation="Sum">
+		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
+	</variable>
+	<variable name="discountamt_1" class="java.math.BigDecimal" resetType="Group" resetGroup="Allocations" calculation="Sum">
+		<variableExpression><![CDATA[$F{discountamt}]]></variableExpression>
+	</variable>
+	<group name="Allocations">
+		<groupExpression><![CDATA[$F{c_payment_id}]]></groupExpression>
+		<groupFooter>
+			<band height="51">
+				<line>
+					<reportElement stretchType="RelativeToBandHeight" x="0" y="50" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="3.0" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="112" y="3" width="100" height="20"/>
+					<textElement textAlignment="Right" lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[รวม:]]></text>
+				</staticText>
+				<textField pattern="#,##0.00;(#,##0.00)">
+					<reportElement x="0" y="28" width="554" height="20"/>
+					<textElement textAlignment="Center" lineSpacing="Single">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["("+org.ecosoft.util.Scriptlet.getAmtInWords($F{totpayamt}.setScale($V{v_scale}).toString(),"THB")+")"]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)">
+					<reportElement x="224" y="3" width="119" height="20"/>
+					<textElement textAlignment="Right" lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$V{amount_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00;(#,##0.00)">
+					<reportElement x="442" y="3" width="112" height="20"/>
+					<textElement textAlignment="Right" lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{totpayamt}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="1" y="23" width="555" height="1"/>
+				</line>
+				<textField pattern="#,##0.00;(#,##0.00)">
+					<reportElement x="343" y="3" width="100" height="20"/>
+					<textElement textAlignment="Right" lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$V{discountamt_1}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="0" width="555" height="1"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="126" splitType="Stretch">
+			<frame>
+				<reportElement x="327" y="44" width="213" height="76"/>
+				<staticText>
+					<reportElement x="0" y="15" width="71" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[วันที่:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="71" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เลขที่เอกสาร:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="71" y="0" width="142" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{pay_docno}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="71" y="15" width="142" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{datetrx}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="194" y="0" width="167" height="44"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ใบเสร็จรับเงิน
+Receipt
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="194" height="44"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[417 หมู่ 2 ถนน บางพลี-ตำหรุ
+ตำบล แพรกษาใหม่ อำเภเ เมือง
+จังหวัด สมุทรปราการ, 10280 ประเทศไทย]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="15" y="44" width="298" height="75"/>
+				<staticText>
+					<reportElement x="0" y="0" width="65" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ชื่อลูกค้า:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="15" width="65" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ที่อยู่ลูกค้า:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="65" y="0" width="233" height="15"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cust_name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="65" y="15" width="233" height="60"/>
+					<textElement lineSpacing="Single">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{address1},$F{address2},$F{address3},$F{address4},$F{city},$F{regionname},$F{postal})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="125" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="512" y="0" width="44" height="44"/>
+				<imageExpression class="java.lang.String"><![CDATA["raja_logo.gif"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="26" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="7" width="112" height="20"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[เลขที่ใบแจ้งหนี้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="7" width="112" height="20"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ใบแจ้งหนี้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="7" width="119" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงิน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="7" width="100" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ส่วนลด]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="7" width="112" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[จำนวนเงินที่ชำระ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="27" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23">
+			<textField>
+				<reportElement x="0" y="3" width="112" height="20"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{inv_docno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="false">
+				<reportElement x="112" y="3" width="112" height="20"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="224" y="3" width="119" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="343" y="3" width="100" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{discountamt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(#,##0.00)">
+				<reportElement x="443" y="3" width="112" height="20"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{payamt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="109">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="108"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[
+
+
+ชำระโดย
+
+
+
+ขอแสดงความขอบคุณสำหรับการชำระเงินตามรายการข้างต้นและใบเสร็จรับเงินฉบับนี้จะสมบูรณ์ต่อเมื่อเรียกเก็บเงินได้เรียบร้อย
+]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="51" y="23" width="446" height="49"/>
+			</rectangle>
+			<textField>
+				<reportElement x="67" y="37" width="416" height="20"/>
+				<textElement lineSpacing="Single">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{paid_by}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

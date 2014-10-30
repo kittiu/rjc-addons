@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="53-attach" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ccbfff9c-4fc9-47a7-8c2c-de91fcd4ec08">
+	<property name="ireport.zoom" value="0.9313819845887338"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="591"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="withholding_list" uuid="778fc7f2-d9fe-4187-b969-617209b6d615">
+		<parameter name="p_c_bpartner_id" class="java.math.BigDecimal"/>
+		<parameter name="p_c_period_id" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select pay.c_bpartner_id, ivl.c_charge_id, chg.name as type, wht.c_tax_id, tax.name as rate, pr.startdate, pr.enddate, wht.dateacct, sum(wht.taxbaseamt) as bastamt, sum(wht.taxamt) as taxamt
+
+from lco_paymentwithholding wht
+join C_PaymentAllocate pal on pal.c_paymentallocate_id = wht.c_paymentallocate_id
+join c_invoiceline ivl on ivl.c_invoiceline_id = wht.c_invoiceline_id
+join c_payment pay on pal.c_payment_id = pay.c_payment_id
+-- Make sure that, only 1 billto address is chosen
+join c_period pr on pr.startdate <= wht.dateacct and pr.enddate >= wht.dateacct
+join c_tax tax on tax.c_tax_id = wht.c_tax_id
+join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+
+where pay.c_bpartner_id = $P{p_c_bpartner_id}
+and pr.c_period_id = $P{p_c_period_id}
+and pay.docstatus in ('CO','CL')
+group by  pay.c_bpartner_id, ivl.c_charge_id, chg.name, wht.c_tax_id, tax.name,  pr.startdate, pr.enddate, wht.dateacct]]>
+		</queryString>
+		<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+		<field name="c_charge_id" class="java.math.BigDecimal"/>
+		<field name="type" class="java.lang.String"/>
+		<field name="c_tax_id" class="java.math.BigDecimal"/>
+		<field name="rate" class="java.lang.String"/>
+		<field name="startdate" class="java.sql.Timestamp"/>
+		<field name="enddate" class="java.sql.Timestamp"/>
+		<field name="dateacct" class="java.sql.Timestamp"/>
+		<field name="bastamt" class="java.math.BigDecimal"/>
+		<field name="taxamt" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="C_Period_ID" class="java.math.BigDecimal"/>
+	<queryString>
+		<![CDATA[select bp.name as bp_name, bp.name2 as surname, bp.c_bpartner_id, pr.c_period_id, loc.c_location_id, loc.address1, loc.address2, loc.address3, loc.address4, loc.city, loc.regionname, loc.postal,
+(CASE WHEN taxpaytype.name='คณะบุคคล' THEN bp.taxid ELSE null END) as bp_taxid,
+(CASE WHEN taxpaytype.name='บุคคลธรรมดา' THEN bp.taxid ELSE null END) as bp_cid,
+org.taxid as org_taxid, sum(wht.taxbaseamt) as baseamt, sum(wht.taxamt) as taxamt
+
+from lco_paymentwithholding wht
+join C_PaymentAllocate pal on pal.c_paymentallocate_id = wht.c_paymentallocate_id
+join c_invoiceline ivl on ivl.c_invoiceline_id = wht.c_invoiceline_id
+join c_payment pay on pal.c_payment_id = pay.c_payment_id
+join c_bpartner bp on bp.c_bpartner_id = pay.c_bpartner_id
+join ad_orginfo org on org.ad_org_id = pay.ad_org_id
+left join LCO_TaxPayerType taxpaytype on taxpaytype.LCO_TaxPayerType_ID = bp.LCO_TaxPayerType_ID
+-- Make sure that, only 1 billto address is chosen
+left join (select c_bpartner_id, max(c_location_id) as c_location_id from c_bpartner_location where isbillto = 'Y' and isactive='Y' group by c_bpartner_id) bpl on bpl.c_bpartner_id = bp.c_bpartner_id
+join c_location loc on loc.c_location_id = bpl.c_location_id
+left join c_city city on city.c_city_id = loc.c_city_id
+left join c_region region on region.c_region_id = loc.c_region_id
+join c_tax tax on tax.c_tax_id = wht.c_tax_id
+join c_charge chg on chg.c_charge_id = ivl.c_charge_id
+join c_period pr on pr.startdate <= wht.dateacct and pr.enddate >= wht.dateacct
+
+where pr.c_period_id = $P{C_Period_ID}
+and pay.docstatus in ('CO','CL')
+and taxpaytype.name in ('บุคคลธรรมดา', 'คณะบุคคล')
+group by bp_name, surname, bp.c_bpartner_id, pr.c_period_id, loc.c_location_id, loc.address1, loc.address2, loc.address3, loc.address4, loc.city, loc.regionname, loc.postal, bp_taxid, bp_cid, org.taxid
+order by bp_name desc]]>
+	</queryString>
+	<field name="bp_name" class="java.lang.String"/>
+	<field name="surname" class="java.lang.String"/>
+	<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+	<field name="c_period_id" class="java.math.BigDecimal"/>
+	<field name="c_location_id" class="java.math.BigDecimal"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="address3" class="java.lang.String"/>
+	<field name="address4" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<field name="regionname" class="java.lang.String"/>
+	<field name="postal" class="java.lang.String"/>
+	<field name="bp_taxid" class="java.lang.String"/>
+	<field name="bp_cid" class="java.lang.String"/>
+	<field name="org_taxid" class="java.lang.String"/>
+	<field name="baseamt" class="java.math.BigDecimal"/>
+	<field name="taxamt" class="java.math.BigDecimal"/>
+	<variable name="v_rowno" class="java.math.BigDecimal" calculation="Count">
+		<variableExpression><![CDATA[1]]></variableExpression>
+	</variable>
+	<variable name="baseamt_1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{baseamt}]]></variableExpression>
+	</variable>
+	<variable name="taxamt_2" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{taxamt}]]></variableExpression>
+	</variable>
+	<background>
+		<band height="595">
+			<image>
+				<reportElement uuid="80d48b0a-8d58-4e61-8c15-bbd053175bf2" x="0" y="0" width="842" height="595"/>
+				<imageExpression><![CDATA["PND3.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="113" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e698b743-2687-4714-bda7-5d0abd0e5dc2" x="666" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 5, 6 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1c920aa4-817d-4389-8deb-c45fc046c81b" x="677" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 6, 7 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fb543be6-f80d-472b-a6a9-57ded0b677f8" x="689" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 7, 8 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b99e5fbc-d0a3-4c00-8c49-b7125e7e84c9" x="700" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 8, 9 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5d7c2d89-02e2-4829-9b51-85db03507b3f" x="719" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 9, 10 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="deb53d65-a97e-410e-afda-f1b6d38e44b7" x="698" y="35" width="25" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="d9f14859-6446-4468-b483-9970851613b3" x="762" y="35" width="25" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="891a11f4-8403-4bb8-bfc9-35409d90e7d3" x="596" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 0, 1 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f9ed9d2c-595a-42dc-8593-37e1303e11bc" x="614" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 1, 2 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5b3c7c78-5aa6-41e6-a947-9a29a4f1ef50" x="626" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 2, 3 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8e633127-e027-4a35-a621-ca1cce77500f" x="637" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 3, 4 ):""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b60fd3d9-b56a-4d45-8d21-f81448db5704" x="648" y="22" width="10" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{org_taxid}.length()>1?$F{org_taxid}.substring( 4, 5 ):""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="53">
+			<textField>
+				<reportElement uuid="96b3bea5-2baa-4062-901e-441c06105caf" x="130" y="21" width="140" height="14"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="41b01e58-018f-4b92-8347-350ceadf3277" x="354" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 7, 8 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="614e8e45-f736-4ec5-bfb7-a53ef9340872" x="301" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 3, 4 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="050e3aec-aa06-4e59-9d08-20a2fc01be1f" x="383" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 9, 10 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a60a409e-6bad-4b43-814c-f9be134fb3f5" x="260" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 0, 1 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3edee915-229b-4ded-93a8-86e73bafeb59" x="278" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 1, 2 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bc7f5108-4be5-42f0-b0e7-bd54ea90ebe0" x="290" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 2, 3 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6df24ec6-4ddb-4a6e-b810-44a6038f1682" x="366" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 8, 9 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dd75944a-2b24-48f6-aab3-182d97b07e82" x="331" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 5, 6 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0733f057-22f1-47a0-ae01-35a0f90abc27" x="342" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 6, 7 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3f95514d-dfb8-449e-8931-a8fabdcbf509" x="313" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_taxid}.length()==10?$F{bp_taxid}.substring( 4, 5 ):""]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="02fad0a9-4013-4850-9b6a-9a53b3e25bb7" x="79" y="31" width="327" height="21"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{address1},$F{address2},$F{address3},$F{address4},$F{city},$F{regionname},$F{postal})]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement uuid="1bc59339-c417-4bc2-9bc8-4acffeec670a" key="table 2" x="407" y="3" width="409" height="50"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="withholding_list" uuid="f3cd5872-0c95-44b0-9f9a-019a73ef8d3d">
+						<datasetParameter name="p_c_bpartner_id">
+							<datasetParameterExpression><![CDATA[$F{c_bpartner_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="p_c_period_id">
+							<datasetParameterExpression><![CDATA[$F{c_period_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column uuid="b117e166-df0c-4ec1-b0cf-23f88d7c484d" width="56">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField pattern="dd/MM/yyyy">
+								<reportElement uuid="d0277da0-7e56-4b80-8c16-7411af5f79cc" x="0" y="0" width="54" height="17"/>
+								<textElement textAlignment="Left">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dateacct}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="ca99979a-4a5d-4fac-9622-7d6b7abf3931" width="115">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField>
+								<reportElement uuid="0ebeb725-9b20-44de-87f5-91ec7074c8ea" x="0" y="0" width="95" height="17"/>
+								<textElement textAlignment="Left">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="16745498-319d-4905-ad66-e1af7590d87a" width="30">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField>
+								<reportElement uuid="09d51cd9-48b6-4314-8dd0-6361373ccb7d" x="0" y="0" width="20" height="17"/>
+								<textElement textAlignment="Left">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{rate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="225ed5ff-5ba5-4c53-99b2-4ce6bbb94e96" width="85">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement uuid="51676d51-6a4b-4cdc-9ccb-3652262b9c51" x="3" y="0" width="77" height="17"/>
+								<textElement textAlignment="Left">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bastamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="6043c707-73a3-42ef-b320-8a81c979ae9f" width="91">
+						<jr:detailCell height="17" rowSpan="1">
+							<textField pattern="#,##0.00">
+								<reportElement uuid="3de041e2-e5d3-4e47-8623-2baf9b37d3b5" x="3" y="0" width="88" height="17"/>
+								<textElement textAlignment="Left">
+									<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{taxamt}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="9d9fe954-65f6-4f97-b2af-a69d370e866c" width="54">
+						<jr:detailCell height="17" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement uuid="6df3b492-9b4e-4211-96e2-300022389d91" x="37" y="0" width="20" height="50"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{v_rowno}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8d112518-0b9d-481d-95dd-013ea5c209e8" x="228" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 12, 13 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="12a75b17-0588-49d8-9c0f-0ee9331f92cd" x="211" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 11, 12 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c0595e14-8367-4350-a5a6-0e797f3c26ec" x="63" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 0, 1 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b09bb859-18fe-4f79-80e2-23649ac03feb" x="158" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 7, 8 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5d0a2562-3c63-430c-b543-fe87d4bc2d54" x="117" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 4, 5 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="e411f7b1-32df-4891-afac-dee8d972b3f9" x="105" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 3, 4 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4aef4f32-8ca4-4c65-80e2-db1b7175f793" x="135" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 6, 7 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="62abea58-3f2b-4342-826c-6cdcb472fe1c" x="199" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 10, 11 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="edc2192c-7a81-4f64-9fcb-0c25ed994c4e" x="81" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 1, 2 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4198af3a-ef5f-4b74-a762-8743ceafde64" x="170" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 8, 9 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1160b1d6-a3e2-424e-87e0-e80d71fd3a2b" x="93" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 2, 3 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b4300845-b7bf-4d71-8c2a-5c67a0b984ab" x="181" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 9, 10 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7e7a807b-a3ca-45a6-b80b-97005be4cb9b" x="146" y="3" width="10" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bp_cid}.length()==13?$F{bp_cid}.substring( 5, 6 ):""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="99eb8863-6334-4cc7-8238-710f8cf7ad65" x="271" y="21" width="134" height="14"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="23">
+			<textField pattern="#,##0.00">
+				<reportElement uuid="5f227a1a-7a28-427e-aa97-5107f71c5db7" x="610" y="2" width="78" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{baseamt_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement uuid="fb4c9e5e-28e9-498d-b700-06be308c8c63" x="721" y="2" width="63" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{taxamt_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<lastPageFooter>
+		<band height="137"/>
+	</lastPageFooter>
+</jasperReport>

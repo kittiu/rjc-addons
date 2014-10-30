@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Delivery Order" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ca9f9cb4-3a1a-4717-9ff4-41581685a215">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="RECORD_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select io.docstatus, io.m_inout_id, io.c_bpartner_id, bp.name as cust_name,
+	-- Shipping Address
+	l.address1 as ship_address1, l.address2 as ship_address2, l.address3 as ship_address3, l.address4 as ship_address4, l.city as ship_city, l.regionname as ship_regionname, l.postal as ship_postal,
+
+	-- Invoice Address
+	l2.address1 as inv_address1, l2.address2 as inv_address2, l2.address3 as inv_address3, l2.address4 as inv_address4, l2.city as inv_city, l2.regionname as inv_regionname, l2.postal as inv_postal,
+
+	-- Other info and shipment lines
+	io.documentno, io.movementdate, coalesce(io.poreference, '-') as poreference, iol.line, iol.c_orderline_id,
+	o.documentno || ' - ' || ol.line as so_number, o.created, p.name as product_name, uom.name as uom, iol.qtyentered, rl.name as docstatus
+
+from m_inout io
+left join c_bpartner bp on io.c_bpartner_id = bp.c_bpartner_id
+
+-- Joins to get shipping address
+   left join c_bpartner_location bpl ON io.c_bpartner_location_id = bpl.c_bpartner_location_id
+   left join c_location l ON bpl.c_location_id = l.c_location_id
+
+-- Joins to get invoice address
+   left join c_bpartner_location bpil ON bp.c_bpartner_id = bpil.c_bpartner_id AND bpil.isbillto = 'Y' and bpil.isactive = 'Y'
+   left join c_location l2 ON bpil.c_location_id = l2.c_location_id
+
+-- Shpment Lines
+   left join m_inoutline iol on iol.m_inout_id = io.m_inout_id
+   left join c_orderline ol on ol.c_orderline_id = iol.c_orderline_id
+   left join c_order o on o.c_order_id = ol.c_order_id
+   left join m_product p on ol.m_product_id = p.m_product_id
+   left join c_uom uom on ol.c_uom_id = uom.c_uom_id
+-- Get document status
+   left join ad_ref_list rl on rl.value = io.docstatus and ad_reference_id = 131
+
+where io.m_inout_id = $P{RECORD_ID}
+
+order by iol.line]]>
+	</queryString>
+	<field name="docstatus" class="java.lang.String"/>
+	<field name="m_inout_id" class="java.math.BigDecimal"/>
+	<field name="c_bpartner_id" class="java.math.BigDecimal"/>
+	<field name="cust_name" class="java.lang.String"/>
+	<field name="ship_address1" class="java.lang.String"/>
+	<field name="ship_address2" class="java.lang.String"/>
+	<field name="ship_address3" class="java.lang.String"/>
+	<field name="ship_address4" class="java.lang.String"/>
+	<field name="ship_city" class="java.lang.String"/>
+	<field name="ship_regionname" class="java.lang.String"/>
+	<field name="ship_postal" class="java.lang.String"/>
+	<field name="inv_address1" class="java.lang.String"/>
+	<field name="inv_address2" class="java.lang.String"/>
+	<field name="inv_address3" class="java.lang.String"/>
+	<field name="inv_address4" class="java.lang.String"/>
+	<field name="inv_city" class="java.lang.String"/>
+	<field name="inv_regionname" class="java.lang.String"/>
+	<field name="inv_postal" class="java.lang.String"/>
+	<field name="documentno" class="java.lang.String"/>
+	<field name="movementdate" class="java.sql.Timestamp"/>
+	<field name="poreference" class="java.lang.String"/>
+	<field name="line" class="java.math.BigDecimal"/>
+	<field name="c_orderline_id" class="java.math.BigDecimal"/>
+	<field name="so_number" class="java.lang.String"/>
+	<field name="created" class="java.sql.Timestamp"/>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="uom" class="java.lang.String"/>
+	<field name="qtyentered" class="java.math.BigDecimal"/>
+	<group name="Group Footer">
+		<groupExpression><![CDATA[$F{m_inout_id}]]></groupExpression>
+		<groupFooter>
+			<band height="1">
+				<line>
+					<reportElement uuid="bafe7818-4e3f-433e-b8de-4b8f09dd0c27" x="0" y="0" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="3.0" lineStyle="Double"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="126" splitType="Stretch">
+			<frame>
+				<reportElement uuid="82468278-fffa-4dd5-a56d-9e30d84f5f5b" x="325" y="44" width="215" height="76"/>
+				<staticText>
+					<reportElement uuid="54a76ad6-cf2e-41a2-a902-544ee59a6d6d" x="0" y="30" width="71" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เลขที่อ้างอิง:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="1d95cc8b-7b40-4b15-b145-95a755e28ca6" x="0" y="15" width="71" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[วันที่:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="942faadd-686f-4c07-8b38-32ddca4ed091" x="0" y="0" width="71" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[เลขที่เอกสาร:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="cdf8feac-d426-441f-9bee-8e484727ba0e" x="71" y="0" width="144" height="15"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement uuid="2afd8754-1f62-4657-9234-dde40773a50b" x="71" y="15" width="144" height="15"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{movementdate}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="ca480c12-4fa2-4897-a71d-e0a261c6cdf8" x="71" y="30" width="144" height="15"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{poreference}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="a3da1ffa-83d6-4f46-8306-524f46f32948" x="186" y="55" width="29" height="20"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="14" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{docstatus}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement uuid="7d979f9d-1595-4419-9dc4-f09eba456220" x="194" y="0" width="167" height="44"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="SansSerif" size="14" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ใบส่งสินค้า
+Delivery Order
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b858c4f-7d03-4e36-9680-1df853399c0a" x="0" y="0" width="167" height="44"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[417 หมู่ 2 ถนน บางพลี-ตำหรุ
+ตำบล แพรกษาใหม่ อำเภเ เมือง
+จังหวัด สมุทรปราการ, 10280 ประเทศไทย]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="8b47efec-2d43-4ef5-a5ee-9e8ea3242429" x="15" y="44" width="300" height="75"/>
+				<staticText>
+					<reportElement uuid="9a7048ea-077b-46be-b995-f799d2930a3a" x="0" y="0" width="65" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ชื่อลูกค้า:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="148b8ad2-3d10-4e85-a6de-1f9ad18ef085" x="0" y="15" width="65" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[ที่อยู่ลูกค้า:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="d989c778-6d26-41fb-aa60-c68feaeaa6e7" x="0" y="43" width="65" height="15"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<text><![CDATA[สถานที่จัดส่ง:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="be3d0c56-1408-4e0a-8953-8160f27c16e7" x="65" y="0" width="235" height="15"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cust_name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="540a7d5f-7c16-4e00-a663-1da9f83a74bd" x="65" y="43" width="235" height="32"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{ship_address1},$F{ship_address2},$F{ship_address3},$F{ship_address4},$F{ship_city},$F{ship_regionname},$F{ship_postal})]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="c3f0d82f-7b7b-4b31-9af5-dd3560336962" x="65" y="15" width="235" height="30"/>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+					</textElement>
+					<textFieldExpression><![CDATA[org.ecosoft.util.Scriptlet.getAddress($F{inv_address1},$F{inv_address2},$F{inv_address3},$F{inv_address4},$F{inv_city},$F{inv_regionname},$F{inv_postal})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement uuid="ed3b150f-acf0-44b3-ae32-f7596e4b6f60" stretchType="RelativeToBandHeight" x="0" y="125" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement uuid="17432f19-8f33-41a3-b474-87a2744230d1" x="511" y="0" width="44" height="44"/>
+				<imageExpression><![CDATA["raja_logo.gif"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="c6a6c9cd-89cc-4c21-b5a0-5f23b569ce1e" x="360" y="0" width="151" height="39" forecolor="#FF0000"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="20" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{docstatus} == "VO" ? "VOIDED" : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<line>
+				<reportElement uuid="7443ced3-5359-4dcc-8f9f-6c0e68c116fd" x="0" y="28" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="0c60bc6c-f31e-49a9-940a-0a3f338201f5" x="0" y="6" width="100" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[SO#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0fc92c1-2262-407c-afab-69a968643e23" x="100" y="6" width="100" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่ใบสั่งขาย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5bd6d737-db7e-4348-8bd8-8fe981ff2800" x="200" y="6" width="242" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[รายละเอียดสินค้า]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a7043afe-c233-468a-b743-59f2815c2924" x="440" y="6" width="60" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[หน่วย]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b7ffa86-1386-4b41-a4f6-f31bf8585342" x="500" y="6" width="55" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="tahomabd.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[จำนวน]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23">
+			<line>
+				<reportElement uuid="3566969f-92a5-46f5-a9ca-437729cdf98b" x="0" y="0" width="555" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="b4162df4-0e72-43db-9788-8429268ceedb" x="0" y="2" width="100" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{so_number}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="3835b8be-b371-4997-9711-3b5c1d6ec70e" x="100" y="2" width="100" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{created}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="527e4b20-2786-42df-b5d3-a276dc6cccbc" x="200" y="2" width="240" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b802c2f8-a0f3-44f9-8322-725b9819a2de" x="442" y="2" width="58" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;(###0.00)">
+				<reportElement uuid="49f8a450-5231-423e-9f57-2cfef7b64b17" x="500" y="2" width="55" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtyentered}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement uuid="c463f5ed-45ac-40e3-b01a-252207ebf4c6" x="0" y="10" width="100" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ผู้จัด:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7c27c2b0-7000-4168-a231-8d0d70e99970" x="0" y="30" width="100" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10" pdfFontName="tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[วันที่: ]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f85443a6-844d-4379-9aed-20503310f3e2" x="23" y="22" width="150" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d23da23d-3eac-49bf-a907-aa1cebf5440e" x="23" y="42" width="150" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,15 @@
+id,partner_id,partner_invoice_id,partner_shipping_id,name,date_order,pricelist_id/id,order_line/sequence,order_line/type,order_line/name,order_line/product_id,order_line/product_uom_qty,order_line/salesman_id/id,order_line/price_unit,order_line/product_uom
+sale_order_1006165,"ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน",1003860,2013-01-03,product.list0,10,from stock,N/A,MC320SB,2,base.user_root,4485,คัน
+sale_order_1006165,"ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน",1003860,2013-01-03,product.list0,20,from stock,N/A,MC320R,2,base.user_root,4485,คัน
+sale_order_1006165,"ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน",1003860,2013-01-03,product.list0,30,from stock,N/A,MC320S,2,base.user_root,4485,คัน
+sale_order_1006165,"ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน","ศรีวรจักรจักรยาน, ร้าน",1003860,2013-01-03,product.list0,40,from stock,N/A,MC320P,1,base.user_root,4485,คัน
+sale_order_1006089,เสรียนต์,เสรียนต์,เสรียนต์,1003784,2012-12-24,product.list0,10,from stock,N/A,MCV24Y,5,base.user_root,1790,คัน
+sale_order_1006089,เสรียนต์,เสรียนต์,เสรียนต์,1003784,2012-12-24,product.list0,20,from stock,N/A,MGB12R,2,base.user_root,730,คัน
+sale_order_1006089,เสรียนต์,เสรียนต์,เสรียนต์,1003784,2012-12-24,product.list0,30,from stock,N/A,MGB12SB,4,base.user_root,730,คัน
+sale_order_1006089,เสรียนต์,เสรียนต์,เสรียนต์,1003784,2012-12-24,product.list0,40,from stock,- สีชมพู,MGB12K,4,base.user_root,730,คัน
+sale_order_1005504,สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),สหชัยวิทยุจักรยาน (ABC),1003199,2012-11-05,product.list0,30,from stock,** ราคาเนต **,MPS20OK,1,base.user_root,2145,คัน
+sale_order_1006091,บุญลือจักรยาน,บุญลือจักรยาน,บุญลือจักรยาน,1003786,2012-12-24,product.list0,10,from stock,"- คละสี ** ไม่เอาบังโคลน, ไม่เอาตะแกรงท้าย ** กะวงล้อสีสะท้อนแสง **",CKD024,50,base.user_root,790,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,10,from stock,N/A,MGB12R,4,base.user_root,730,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,20,from stock,N/A,MGB12SB,3,base.user_root,730,คัน
+sale_order_1006059,"เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น","เจริญจักรยาน,ขอนแก่น",1003754,2012-12-21,product.list0,30,from stock,- สีชมพู,MGB12K,3,base.user_root,730,คัน
+sale_order_1005498,ห้างทองชัยแสงเพชรจักรยาน,ห้างทองชัยแสงเพชรจักรยาน,ห้างทองชัยแสงเพชรจักรยาน,1003193,2012-11-05,product.list0,10,from stock,** ราคาเนต **,MPS20OK,1,base.user_root,2145,คัน
